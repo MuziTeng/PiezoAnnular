@@ -1,0 +1,1172 @@
+\documentclass[12pt,sort&compress,fleqn,3p]{elsarticle}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{booktabs,longtable}
+\usepackage{multirow}
+\usepackage{subcaption}
+\newcommand{\qiuhe}{ \sum ^{\infty}_{m=-\infty}}
+\newcommand{\jiaobiao}[2]{ {#1} _ {#2} }
+\newcommand{\qiudao}[3]{ {#1} _ {{#2} , {#3}} }
+\newcommand{\er}[4]{{#1}_{#2}{#3}_{#4}}
+\newcommand{\de}[5]{{#1}_{#2}{#3}_{{#4},{#5}}}
+%\title{\bf Three-dimensional axisymmetric \\thermo-magneto-electro-elastic field \\in a functionally graded circular plate\\ with transverse isotropy}
+
+\pagestyle{empty}
+\begin{document}
+\begin{frontmatter}
+\title{\textbf{Axisymmetic electro-elastic field in a heterogeneous  annular plate with a uniform load }}
+\begin{abstract}
+This paper presents electro-elastic field in a heterogeneous circular plate subjected to a load uniformly distributed on the lower boundary. Direct displacement method is employed to derive the coupling electro-elastic field so as to get the explicit expression of stress and displacement.  Finally, numerical calculations are performed to validate the present analysis and to investigate the influence of the material heterogeneity and the multi-field coupling.
+
+\end{abstract}
+\begin{keyword}
+Heterogeneous circular plate \sep Piezoelectric materials \sep Direct displacement method
+\end{keyword}
+
+\end{frontmatter}
+\section{Basic equations}
+The basic equations for the axisymmetric problem of a transversely isotropic FGM body, referred to a
+cylindrical coordinate system $(r, \theta, z)$ with the $z$ axis being normal to the plane of isotropy, are read as follow
+
+balance equation
+\begin{equation}\label{labeq_balanceEq}
+\begin{split}
+&\qiudao{\sigma}{r}{r}+\qiudao{\tau}{rz}{z}+r^{-1}(\jiaobiao{\sigma}{r}-\jiaobiao{\sigma}{\theta})=0,\\
+&\tau_{rz,r}+r^{-1}\tau_{rz}+\sigma_{z,z}=0,\\
+&D_{r,r}+r^{-1}D_r +D_{z,z}=0,\\
+\end{split}
+\end{equation}
+where  $ u $ and $ w $ denote the radial and axial displacement components, respectively.
+
+Constitutive equation
+
+\begin{equation}\label{labeq_ConsEq}
+\begin{split}
+&\sigma_r=c_{11}u_{,r}+c_{12}r^{-1}u+c_{13}w_{,z}+e_{31}\phi_{,z},\\
+&\sigma_\theta=c_{12}u_{,r}+c_{11}r^{-1}u+c_{13}w_{,z}+e_{31}\phi_{,z}, \\
+&\sigma_z=c_{13}(u_{,r}+r^{-1}u)+c_{33}w_{,z}+e_{33}\phi_{,z},\\
+&\tau_{rz}=c_{44}(u_{,z}+w_{,r})+e_{15}\phi_{,r},\\
+&D_r=e_{15}(u_{,z}+w_{,r})-\xi_{11}\phi_{,r},\\
+&D_z=e_{31}(u_{,r}+r^{-1}u)+e_{33}w_{,z}-\xi_{33}\phi_{,z},\\
+\end{split}
+\end{equation}
+where $ \sigma_r  $,       $ \sigma_\theta  $,      $ \sigma_z  $  and   $ \tau_{ij}   $ are the stress components.
+
+
+
+Boundary conditions of upper and lower surfaces
+\begin{equation}\label{labeq_bouncondi}
+\tau_{rz}(r,\pm h/2)=0, \;  D_{z}(z,\pm h/2)=0, \;  \sigma_z(r,h/2)=0, \; \sigma_z(r,-h/2)=-q,
+\end{equation}
+
+
+
+
+\section{Direct displacement method}
+By employing the direct displacement method, we assume generalized displacements
+\begin{equation}\label{labeq_gendis}
+\begin{split}
+&u(r,z)=r^{-1}\jiaobiao{u}{-1}(z)+r\jiaobiao{u}{1}(z)+r^{3}\jiaobiao{u}{3}(z)+\jiaobiao{A}{1}(z)r\ln\frac{r}{r_1},\\
+&w(r,z)=\jiaobiao{w}{0}(z)+r^{2}\jiaobiao{w}{2}(z)+r^{4}\jiaobiao{w}{4}(z)+\jiaobiao{B}{0}(z)\ln\frac{r}{r_1}+\jiaobiao{B}{2}(z)r^{2}\ln\frac{r}{r_1},\\
+&\phi(r,z)=\jiaobiao{\phi}{0}(z)+r^{2}\jiaobiao{\phi}{2}(z)+\jiaobiao{C}{0}(z)\ln\frac{r}{r_1},\\
+\end{split}
+\end{equation}
+where $u_i(z)$, $w_i(z)$, $\phi_i(z)$, $A_i(z)$, $B_i(z)$ and $C_i(z)$ are referred to the displacement functions. The justification of Eq.~\eqref{labeq_gendis} is discussed in Appendix A.
+
+Substituting Eq.~\eqref{labeq_gendis} into Eq.~\eqref{labeq_ConsEq} leads to the expressions for the stress components
+\begin{equation}\label{labeq_stress}
+\begin{split}
+\sigma_{r} =&(\jiaobiao{c}{11}+\jiaobiao{c}{12})\jiaobiao{u}{1}+\er{c}{11}{A}{1}+c_{13}w_{0,z}+\de{e}{31}{\phi}{0}{z}\\
+&+(\jiaobiao{c}{12}-\jiaobiao{c}{11})\jiaobiao{u}{-1}r^{-2}+\big[(3\jiaobiao{c}{11}+\jiaobiao{c}{12})\jiaobiao{u}{3}+\de{c}{13}{w}{2}{z}+\de{e}{31}{\phi}{2}{z}\big]r^{2}+\de{c}{13}{w}{4}{z}r^{4}\\
+&+\big[(c_{11}+c_{12})A_{1}+c_{13}B_{0,z}+\de{e}{31}{C}{0}{z}\big]\ln\frac{r}{r_1}+\de{c}{13}{B}{2}{z}r^{2}\ln\frac{r}{r_1} \\[7pt]
+\sigma_{\theta}=&(\jiaobiao{c}{11}+\jiaobiao{c}{12})\jiaobiao{u}{1}+\er{c}{12}{A}{1}+c_{13}w_{0,z}+\de{e}{31}{\phi}{0}{z}\\
+&+(\jiaobiao{c}{11}-\jiaobiao{c}{12})\jiaobiao{u}{-1}r^{-2}+\big[(\jiaobiao{c}{11}+3\jiaobiao{c}{12})\jiaobiao{u}{3}+\de{c}{13}{w}{2}{z}+\de{e}{31}{\phi}{2}{z}\big]r^{2}+\de{c}{13}{w}{4}{z}r^{4}\\
+&+\big[(c_{11}+c_{12})A_{1}+c_{13}B_{0,z}+\de{e}{31}{C}{0}{z}\big]\ln\frac{r}{r_1}+\de{c}{13}{B}{2}{z}r^{2}\ln\frac{r}{r_1}\\[7pt]
+\sigma_{z}=&2\er{c}{13}{u}{1}+\er{c}{13}{A}{1}+c_{33}w_{0,z}+\de{e}{33}{\phi}{0}{z}\\
+&+(4\er{c}{13}{u}{3}+c_{33}w_{2,z}+\de{e}{33}{\phi}{2}{z})r^{2}+\de{c}{33}{w}{4}{z}r^{4}\\
+&+(2\er{c}{13}{A}{1}+c_{33}B_{0,z}+\de{e}{33}{C}{0}{z})\ln\frac{r}{r_1}  +c_{33}B_{2,z} r^2 \ln\frac{r}{r_1}      \\[7pt]
+\tau_{rz}=&\big[c_{44}(u_{-1,z}+B_{0})+\er{e}{15}{C}{0}\big]r^{-1} + \big[c_{44}(u_{1,z}+2w_{2}+B_{2})+2\er{e}{15}{\phi}{2}\big]r\\
+&+c_{44}(u_{3,z}+4w_{4})r^{3}+c_{44}(A_{1,z}+2B_{2})r\ln\frac{r}{r_1}\\
+D_{r}=& [e_{15}(u_{-1,z}+B_{0})-\er{\xi}{11}{C}{0}]r^{-1}+ [e_{15}(u_{1,z}+2w_{2}+B_{2})-2\er{\xi}{11}{\phi}{2}]r\\
+&+e_{15}(u_{3,z}+4w_{4})r^{3} +e_{15}(A_{1,z}+2B_{2})r\ln\frac{r}{r_1}\\
+D_{z}=&2e_{31}u_{1}+e_{31}A_{1}+\de{e}{33}{w}{0}{z}-\de{\xi}{33}{\phi}{0}{z}\\
+&+(4e_{31}u_{3}+\de{e}{33}{w}{2}{z}-\de{\xi}{33}{\phi}{2}{z})r^{2}+\de{e}{33}{w}{4}{z}r^{4}\\
+&+(2\er{e}{31}{A}{1}+\de{e}{33}{B}{0}{z}-\de{\xi}{33}{C}{0}{z})\ln\frac{r}{r_1}+\de{e}{33}{B}{2}{z}r^{2}\ln\frac{r}{r_1}
+\end{split}
+\end{equation}
+
+
+
+
+
+Substituting  stress   Eq.~\eqref{labeq_stress}  into  balance   Eq.~\eqref{labeq_balanceEq} and comparing the coefficients of $r^m$ and $r^m \ln(r/r_1)$, we can obtain the following differential equations system
+\begin{subequations}\label{labeq_system}
+\begin{equation}\label{labeq_system_01}
+\qiudao{\big[c_{44}(u_{-1,z}+B_{0})+\er{e}{15}{C}{0}\big]}{}{z}+2\er{c}{11}{A}{1}  +\de{c}{13}{B}{0}{z}+\de{e}{31}{C}{0}{z}=0
+\end{equation}
+\begin{equation}\label{labeq_system_02}
+\qiudao{\big[c_{44}(u_{1,z}+2w_{2}+B_{2})+2\er{e}{15}{\phi}{2}\big]}{}{z}+8c_{11}u_{3}+ 2c_{13}w_{2,z}  + c_{13}B_{2,z}+2e_{31}\phi_{2,z}=0
+\end{equation}
+\begin{equation}\label{labeq_system_03}
+\qiudao{\big[c_{44}u_{3,z}+4c_{44}w_{4}\big]}{}{z}+4\de{c}{13}{w}{4}{z}=0
+\end{equation}
+\begin{equation}\label{labeq_system_04}
+\big[c_{44}A_{1,z} + 2c_{44}B_2 \big]_{,z} + 2c_{13}B_{2,z} =0
+\end{equation}
+\begin{equation}\label{labeq_system_05}
+\begin{split}
+&\qiudao{\big[2c_{13}u_{1}+c_{13}A_{1}+c_{33}w_{0,z}+\de{e}{33}{\phi}{0}{z}\big]}{}{z}\\
+&+c_{44}(2u_{1,z}+A_{1,z}+4w_{2}+4B_{2})+4\er{e}{15}{\phi}{2}=0
+\end{split}
+\end{equation}
+\begin{equation}\label{labeq_system_06}
+\qiudao{[4\er{c}{13}{u}{3}+\de{c}{33}{w}{2}{z}+\de{e}{33}{\phi}{2}{z}]}{}{z}+4c_{44}(u_{3,z}+4w_{4})=0
+\end{equation}
+\begin{equation}\label{labeq_system_07}
+(c_{33}w_{4,z})_{,z}=0
+\end{equation}
+\begin{equation}\label{labeq_system_08}
+\qiudao{\big[2\er{c}{13}{A}{1}+\de{c}{33}{B}{0}{z}+\de{e}{33}{C}{0}{z}\big]}{}{z}+2c_{44}A_{1,z}+4c_{44}B_{2}=0
+\end{equation}
+\begin{equation}\label{labeq_system_09}
+(c_{33}B_{2,z})_{,z}=0
+\end{equation}
+\begin{equation}\label{labeq_system_10}
+\begin{split}
+&\qiudao{\big[2e_{31}u_{1}+e_{31}A_{1}+e_{33}w_{0,z}-\de{\xi}{33}{\phi}{0}{z}\big]}{}{z}\\
+&+e_{15}(2u_{1,z}+A_{1,z}+4w_{2}+4B_{2})-4\er{\xi}{11}{\phi}{2}=0
+\end{split}
+\end{equation}
+\begin{equation}\label{labeq_system_11}
+\qiudao{[4\er{e}{31}{u}{3}+\de{e}{33}{w}{2}{z}-\de{\xi}{33}{\phi}{2}{z}]}{}{z}+4e_{15}(u_{3,z}+4w_{4})=0
+\end{equation}
+\begin{equation}\label{labeq_system_12}
+(e_{33}w_{4,z})_{,z}=0
+\end{equation}
+\begin{equation}\label{labeq_system_13}
+\qiudao{[2\er{e}{31}{A}{1}+\de{e}{33}{B}{0}{z}-\de{\xi}{33}{C}{0}{z}]}{}{z}+2e_{15}A_{1,z}+4e_{15}B_{2}=0
+\end{equation}
+\begin{equation}\label{labeq_system_14}
+(e_{33}B_{2,z})_{,z}=0
+\end{equation}
+\end{subequations}
+
+
+Similarly,  substitution of  stress   Eq.~\eqref{labeq_stress}  into  boundary    Eq.~\eqref{labeq_bouncondi} and  comparison between  the coefficients of $r^m$ and $r^m \ln(r/r_1)$ gives  following boundary conditions
+\begin{subequations}\label{labeq_boundsystem}
+\begin{equation}\label{labeq_boundsystem_01}
+\big[c_{44}(u_{-1,z}+B_{0})+\er{e}{15}{C}{0}\big]\Big|_{z=\pm h/2}=0
+\end{equation}
+\begin{equation}\label{labeq_boundsystem_02}
+\big[c_{44}(u_{1,z}+2w_{2}+B_{2})+2\er{e}{15}{\phi}{2}\big]\Big|_{z=\pm h/2}=0
+\end{equation}
+\begin{equation}\label{labeq_boundsystem_03}
+\big[c_{44}u_{3,z}+4c_{44}w_{4}\big]\Big|_{z=\pm h/2}=0
+\end{equation}
+\begin{equation}\label{labeq_boundsystem_04}
+\big[c_{44}A_{1,z}+2c_{44}B_{2}\big]\Big|_{z=\pm h/2}=0
+\end{equation}
+\begin{equation}\label{labeq_boundsystem_05}
+\big[2e_{31}u_{1}+e_{31}A_{1}+e_{33}w_{0,z}-\de{\xi}{33}{\phi}{0}{z}\big]\Big|_{z=\pm h/2}=0
+\end{equation}
+\begin{equation}\label{labeq_boundsystem_06}
+[4\er{e}{31}{u}{3}+\de{e}{33}{w}{2}{z}-\de{\xi}{33}{\phi}{2}{z}]\big|_{z=\pm h/2}=0
+\end{equation}
+\begin{equation}\label{labeq_boundsystem_07}
+[e_{33}w_{4,z}]\big|_{z=\pm h/2}=0
+\end{equation}
+\begin{equation}\label{labeq_boundsystem_08}
+[2\er{e}{31}{A}{1}+\de{e}{33}{B}{0}{z}-\de{\xi}{33}{C}{0}{z}]\big|_{z=\pm h/2}=0
+\end{equation}
+\begin{equation}\label{labeq_boundsystem_09}
+[e_{33}B_{2,z}]\big|_{z=\pm h/2}=0
+\end{equation}
+\begin{equation}\label{labeq_boundsystem_10}
+[4\er{c}{13}{u}{3}+\de{c}{33}{w}{2}{z}+\de{e}{33}{\phi}{2}{z}]\big|_{z=\pm h/2}=0
+\end{equation}
+\begin{equation}\label{labeq_boundsystem_11}
+[c_{33}w_{4,z}]\big|_{z=\pm h/2}=0
+\end{equation}
+\begin{equation}\label{labeq_boundsystem_12}
+[2\er{c}{13}{A}{1}+\de{c}{33}{B}{0}{z}+\de{e}{33}{C}{0}{z}]\big|_{z=\pm h/2}=0
+\end{equation}
+\begin{equation}\label{labeq_boundsystem_13}
+[c_{33}B_{2,z}]\big|_{z=\pm h/2}=0
+\end{equation}
+\begin{equation}\label{labeq_boundsystem_14}
+\begin{split}
+&\big[2c_{13}u_{1}+c_{13}A_{1}+c_{33}w_{0,z}+\de{e}{33}{\phi}{0}{z}\big]\Big|_{z=~h/2}= -q\\
+&\big[2c_{13}u_{1}+c_{13}A_{1}+c_{33}w_{0,z}+\de{e}{33}{\phi}{0}{z}\big]\Big|_{z=-h/2}= 0
+\end{split}
+\end{equation}
+\end{subequations}
+
+
+Then, we will derive the explicit expressions of the generalized displacement functions  according to the combination of Eq.~\eqref{labeq_system} and  Eq.~\eqref{labeq_boundsystem}.
+
+From  Eqs.~\eqref{labeq_system_07}, \eqref{labeq_system_09}, \eqref{labeq_system_12} \eqref{labeq_system_14} and Eqs.~\eqref{labeq_boundsystem_07}, \eqref{labeq_boundsystem_09}, \eqref{labeq_boundsystem_11}, \eqref{labeq_boundsystem_13}, we can  obtain that both $B_{2,z}$ and $w_{4,z}$ are zeros, so  we can write them as
+
+\begin{equation}\label{labeq_w4B2}
+\begin{split}
+&B_{2}= \gamma_{b2}\\
+&w_{4}= \gamma_{w4},\\
+\end{split}
+\end{equation}
+where $\gamma_{b2}$ and $\gamma_{w4}$ are integral constants.   Then,   the combination of   Eqs.~\eqref{labeq_system_03} and  \eqref{labeq_boundsystem_03} gives $ c_{44}u_{3,z} + 4c_{44}\gamma_{w4} = 0 $, while the combination of   Eqs.~\eqref{labeq_system_04} and  \eqref{labeq_boundsystem_04}  gives   $ c_{44}A_{1,z} + 2c_{44}\gamma_{b2} = 0 $, so we can describe $u_{3}$  and $A_1$ as
+\begin{equation}\label{labeq_u3A1}
+\begin{split}
+&u_{3}(z)=-4\gamma_{w4}z+\gamma_{u3}\\
+&A_{1}(z)=-2\gamma_{b2}z+\gamma_{a1}\\
+\end{split}
+\end{equation}
+where where $\gamma_{u3}$ and $\gamma_{a1}$ are integral constants.
+
+Substituting Eq.~\eqref{labeq_u3A1}  into Eqs.~\eqref{labeq_system_06} and \eqref{labeq_system_11}, and combining  Eqs.~\eqref{labeq_boundsystem_06} and  \eqref{labeq_boundsystem_10}, we obtain
+\begin{equation}\label{labeq_w2phi2_z}
+\begin{split}
+&4\er{c}{13}{u}{3}+\de{c}{33}{w}{2}{z}+\de{e}{33}{\phi}{2}{z}=0\\
+&4\er{e}{31}{u}{3}+\de{e}{33}{w}{2}{z}-\de{\xi}{33}{\phi}{2}{z}=0\\
+\end{split}
+\end{equation}
+Solving above equation to obtain $w_{2,z}$ and $\phi_{2,z}$, and integrating them, we can obtain
+\begin{equation}\label{labeq_w2phi2}
+\begin{split}
+&w_{2}(z)=16\gamma_{w4}\hat{f}^1_{1}(z)-4\gamma_{u3}\hat{f}^0_{1}(z)+\gamma_{w2}\\
+&\phi_{2}(z)=16\gamma_{w4}\hat{f}^1_{2}(z)-4\gamma_{u3}\hat{f}^0_{2}(z)+\gamma_{\phi2},
+\end{split}
+\end{equation}
+where $\gamma_{w2}$ and $\gamma_{\phi2}$ are integral constants, and $f^n_{1}$ and $f^n_{2}$ are defined as
+\begin{equation}\label{labeq_f1nf2n}
+\begin{split}
+&  \hat{f}^n_{1}(z)  =  \int_{-h/2}^{z} f^n_{1}(\eta)  \mathrm{d} \eta,   ~~\text{where}~~ f^n_{1}(z)=\frac{\er{c}{13}{\xi}{33}+e_{33}e_{31}}{e_{33}^{2}+\xi_{33}c_{33}}z^{n},
+\quad n=0,1\\
+& \hat{f}^n_{2}(z) =  \int_{-h/2}^{z} f^n_{2}(\eta)   \mathrm{d}\eta,   ~~\text{where}~~  f^n_{2}(z)=\frac{e_{33}c_{13}-\er{c}{33}{e}{31}}{e_{33}^{2}+\xi_{33}c_{33}}z^{n},
+\quad n=0,1\\
+\end{split}
+\end{equation}
+
+Similarly, the combination of  Eqs.~\eqref{labeq_system_08}, \eqref{labeq_system_13}, \eqref{labeq_boundsystem_08} and \eqref{labeq_boundsystem_12} gives
+\begin{equation}\label{labeq_B0C0_z}
+\begin{split}
+&2\er{c}{13}{A}{1}+\de{c}{33}{B}{0}{z}+\de{e}{33}{C}{0}{z}=0\\
+&2\er{e}{31}{A}{1}+\de{e}{33}{B}{0}{z}-\de{\xi}{33}{C}{0}{z}=0\\
+\end{split}
+\end{equation}
+and its solution can be written as
+\begin{equation}\label{labeq_B0C0}
+\begin{split}
+&B_{0}(z)=4\gamma_{b2}\hat{f}^1_{1}(z)-2\gamma_{a1}\hat{f}^0_{1}(z)+\gamma_{b0}\\
+&C_{0}(z)=4\gamma_{b2}\hat{f}^1_{2}(z)-2\gamma_{a1}\hat{f}^0_{2}(z)+\gamma_{c0},
+\end{split}
+\end{equation}
+where $\gamma_{b0}$ and $\gamma_{c0}$ are integral constants.
+
+
+
+Substituting Eqs.~\eqref{labeq_u3A1} and  \eqref{labeq_B0C0}  into  Eqs.~\eqref{labeq_system_01}, and integrating it will result in
+\begin{equation}\label{labeq_u-1_z}
+\big[c_{44}(u_{-1,z}+B_{0})+\er{e}{15}{C}{0}\big]=4\gamma_{b2}K_{1}(z)-2\gamma_{a1}K_{0}(z)
+\end{equation}
+where $K_i$ is define as
+\begin{equation}\label{labeq_AppBKidefine}
+\begin{split}
+&K_{n}(z)=\int_{-h/2}^{z}\left(c_{11}-c_{13}\frac{\er{c}{13}{\xi}{33}+e_{33}e_{31}}
+{e_{33}^{2}+\xi_{33}c_{33}}-e_{31}\frac{e_{33}c_{13}-\er{c}{33}{e}{31}}{e_{33}^{2}+\xi_{33}c_{33}}\right)\eta^{n}\mathrm{d}\eta\hspace{0.5cm}(n=0,1,2).
+\end{split}
+\end{equation}
+
+According the boundary condition in   Eq.~\eqref{labeq_boundsystem_01}, we have
+\begin{equation}\label{labeq_b2a1_constrain}
+2\gamma_{b2}K_{1}(\dfrac{h}{2})-\gamma_{a1}K_{0}(\dfrac{h}{2})=0.
+\end{equation}
+
+
+Defining   function form  as following
+
+\begin{equation}\label{labeq_f2nf4}
+\begin{split}
+&   \hat{f}^n_{3}(z)  =  \int_{-h/2}^{z} f^n_{3}(\eta)   d\eta,   ~~\text{where}~~    f^n_{3}(z)=c_{44}^{-1}K_{n}(z)-c_{44}\hat{f}^n_{1}(z)-e_{15}\hat{f}^n_{2}(z), \quad n=0,1\\
+\end{split}
+\end{equation}
+we can solve Eq.~\eqref{labeq_u-1_z} to  obtain $u_{-1}$ as
+
+\begin{equation}\label{labeq_u-1}
+u_{-1}(z)=4\gamma_{b2}\hat{f}^1_{3}(z)-2\gamma_{a1}\hat{f}^0_{3}(z)-  \gamma_{b0}\hat{f}_4(z)  -  \gamma_{c0}\hat{f}_5(z)   +\gamma_{u-1},
+\end{equation}
+where $\gamma_{u-1}$ is integral constant, and
+\begin{equation}\label{labeq_f4f5}
+\begin{split}
+&\hat{f}_{4}(z)=\int_{-h/2}^{z}f_4(\eta) \mathrm{d}\eta,  ~~\text{where}~~ f_4(\eta) = c_{44}  \\
+&\hat{f}_{5}(z)=\int_{-h/2}^{z}f_5(\eta) \mathrm{d}\eta, ~~\text{where}~~  f_5(\eta) = e_{15} \\
+\end{split}
+\end{equation}
+
+
+
+Similarly,  Substitution of  Eqs.~\eqref{labeq_w4B2}, \eqref{labeq_u3A1}  and  \eqref{labeq_w2phi2} into     Eqs.~\eqref{labeq_system_02}   leads  to
+\begin{equation}\label{labeq_u1_dz}
+c_{44}(u_{1,z}+2w_{2}+B_{2})+2\er{e}{15}{\phi}{2}=32\gamma_{w4}K_{1}(z)-8\gamma_{u3}K_{0}(z).
+\end{equation}
+
+According the boundary condition in Eq.~\eqref{labeq_boundsystem_01}, we can obtain
+\begin{equation}\label{labeq_w4u3_constrain}
+4\gamma_{w4}K_{1}(\dfrac{h}{2})-\gamma_{u3}K_{0}(\dfrac{h}{2})=0.
+\end{equation}
+Solving Eq.~\eqref{labeq_u1_dz} can  obtain $u_1$ as
+\begin{equation}\label{labeq_u1}
+u_{1}(z)=32\gamma_{w4}\hat{f}^1_{3}(z)-8\gamma_{u3}\hat{f}^0_{3}(z)- 2\gamma_{w2}\hat{f}_4(z) - 2\gamma_{\phi2}\hat{f}_5(z)   - \gamma_{b2}\hat{f}_4(z)  +\gamma_{u1},
+\end{equation}
+where $\gamma_{u1}$ is integral constant.
+
+
+
+
+Substituting Eqs.~\eqref{labeq_u1}, \eqref{labeq_u3A1}  \eqref{labeq_w4B2} and  \eqref{labeq_w2phi2}  into Eqs.~\eqref{labeq_system_05} and \eqref{labeq_system_10},  and integrating them  results in
+\begin{equation}\label{labeq_w0phi0_dz0}
+\begin{split}
+&c_{13}(2u_{1}+A_{1})+c_{33}w_{0,z}+\de{e}{33}{\phi}{0}{z}=-64\gamma_{w4}\hat{K}_{1}(z)+16\gamma_{u3}\hat{K}_{0}(z)\\
+&e_{31}(2u_{1}+A_{1})+e_{33}w_{0,z}-\de{\xi}{33}{\phi}{0}{z}=-64\gamma_{w4}\hat{H}_{1}(z)+16\gamma_{u3}\hat{H}_{0}(z)+4\gamma_{\phi2} \hat{f}_6(z)
+\end{split}
+\end{equation}
+where
+\begin{equation}\label{labeq_knhnq_define}
+\begin{split}
+&\hat{K}_{n}(z)=\int_{-h/2}^{z}K_{n}(z)\mathrm{d}\eta ~~~~~~~n=0,1\\
+&\hat{H}_{n}=\int_{-h/2}^{z} H_{n}(\eta)  \mathrm{d}\eta ~~\text{where}~~ H_{n}(z) =  \frac{e_{15}}{c_{44}}K_{n}(z)-\left(\frac{e_{15}^{2}}{c_{44}}+\xi_{11}\right) \hat{f}^{n}_{2}(z) ~~~n=0,1\\
+&\hat{f}_6({z})=\int_{-h/2}^{z} f_6(\eta) \mathrm{d}\eta  ~~\text{where}~~  f_6(z) =  \frac{e_{15}^{2}}{c_{44}} +\xi_{11}
+\end{split}
+\end{equation}
+
+The boundary conditions in Eqs.~\eqref{labeq_boundsystem_05} and \eqref{labeq_boundsystem_14} require that
+\begin{equation}\label{labeq_w4u3phi2_constrain}
+\begin{split}
+&-64\gamma_{w4}\hat{K}_{1}(\dfrac{h}{2})+16\gamma_{u3}\hat{K}_{0}(\dfrac{h}{2}) =  q\\
+&-16\gamma_{w4}\hat{H}_{1}(\dfrac{h}{2})+4\gamma_{u3}\hat{H}_{0}(\dfrac{h}{2})+\gamma_{\phi2}\hat{f}_6(\dfrac{h}{2}) = 0
+\end{split}
+\end{equation}
+
+
+
+
+Substituting Eqs.~\eqref{labeq_u1} and \eqref{labeq_u3A1}   into Eqs.~\eqref{labeq_w0phi0_dz0} arrives at
+\begin{equation}\label{labeq_w0phi0_z}
+\begin{split}
+\de{c}{33}{w}{0}{z}+\de{e}{33}{\phi}{0}{z}= &-64\gamma_{w4}R_{1}+16\gamma_{u3}R_{0}\\
+& +4\gamma_{\phi2}c_{13}\hat{f}_4(z) + 4\gamma_{w2}c_{13}\hat{f}_5(z)  + 2\gamma_{b2}c_{13}\hat{f}_4(z)+ 2 \gamma_{b2} c_{13}z  \\
+&-\gamma_{a1} c_{13} - 2\gamma_{u1}c_{13}\\
+\de{e}{33}{w}{0}{z}-\de{\xi}{33}{\phi}{0}{z}=&-64\gamma_{w4}S_{1}+16\gamma_{u3}S_{0}\\
+& +4\gamma_{\phi2}e_{31}\hat{f}_4(z) + 4\gamma_{w2}e_{31}\hat{f}_5(z)  + 2\gamma_{b2}e_{31}\hat{f}_4(z)+ 2\gamma_{b2}e_{31}z  \\
+&-\gamma_{a1}e_{31} - 2\gamma_{u1}e_{31}+4\gamma_{\phi2}\hat{f}_6(z)\\
+\end{split}
+\end{equation}
+where
+\begin{equation}\label{labeq_RSTO_define}
+\begin{split}
+&R_{n}(z)=\hat{K}_{n}(z)+c_{13}\hat{f}^n_{3}(z) ~~~~~~~n=0,1\\
+&S_{n}(z)=\hat{H}_{n}^{*}(z)+e_{31}\hat{f}^n_{3}(z)~~~~~~~n=0,1\\
+\end{split}
+\end{equation}
+
+Soling Eq.~\eqref{labeq_w0phi0_z}, we can obtain  $w_{0}$ and $\phi_{0}$  as
+\begin{equation}\label{labeq_w0phi0}
+\begin{split}
+w_{0}=&-64\gamma_{w4}\hat{f}^1_{7}+16\gamma_{u3}\hat{f}^0_{7}+ 4 \gamma_{\phi 2} (\hat{f}^4_{9}+ f_7)  +4 \gamma_{w 2} \hat{f}^4_{9} +  2 \gamma_{b2}(\hat{f}^4_{9} + \hat{f}^1_{11}) \\
+ &-  \gamma_{a1} \hat{f}^0_{11} - 2\gamma_{u1}\hat{f}^0_{11}   +  \gamma_{w0}  \\
+\phi_{0}= & -64\gamma_{w4}\hat{f}^1_{8}+16\gamma_{u3}\hat{f}^0_{8}+4 \gamma_{\phi 2}( \hat{f}^4_{10} +f_8) +4 \gamma_{w 2} \hat{f}^5_{10} + 2 \gamma_{b2}(\hat{f}^4_{10} + \hat{f}^1_{12}) \\
+&-  \gamma_{a1}\hat{f}^0_{12} - 2\gamma_{u1}\hat{f}^0_{12} +\gamma_{\phi0}
+\end{split}
+\end{equation}
+where
+\begin{equation}
+\begin{split}
+&\hat{f}^n_{7}(z)=\int_{-h/2}^{z} f^n_{7}(\eta) \mathrm{d}\eta     ~~\text{where}~~  f^n_{7}(z) =  \frac{e_{33}R_{n}(z)+\xi_{33}S_{n}(z)}{e_{33}^{2}+c_{33}\xi_{33}}  ~~~~~~~n=0,1  \\
+&\hat{f}^n_{8}(z)=\int_{-h/2}^{z} f^n_{8}(\eta) \mathrm{d}\eta  ~~\text{where}~~  f^n_{8}(z) = \frac{e_{33}S_{n}(z)-c_{33}R_{n}(z)}{e_{33}^{2}+c_{33}\xi_{33}}  ~~~~~~~n=0,1 \\
+&\hat{f}^n_{9}(z)=\int_{-h/2}^{z} f^n_{9}(\eta) \mathrm{d}\eta  ~~\text{where}~~  f^n_{9}(z)=  \frac{e_{33}c_{13} + \xi_{33}e_{31}   }{e_{33}^{2}+c_{33}\xi_{33}} \hat{f}_n(z)   ~~~~~~~n=4,5  \\
+&\hat{f}^n_{10}(z)=\int_{-h/2}^{z} f^n_{10}(\eta)\mathrm{d}\eta    ~~\text{where}~~  f^n_{10}(z)=  \frac{e_{33}e_{31} -c_{33}c_{13} }{e_{33}^{2}+c_{33}\xi_{33}}\hat{f}_n(z)   ~~~~~~~n=4,5\\
+&\hat{f}^n_{11}(z)=\int_{-h/2}^{z} f^n_{9}(\eta) \mathrm{d}\eta  ~~\text{where}~~ f^n_{11}(z)=\frac{e_{33}c_{13} + \xi_{33}e_{31}   }{e_{33}^{2}+c_{33}\xi_{33}} z^n  ~~~~~~~n=0,1  \\
+&\hat{f}^n_{12}(z)=\int_{-h/2}^{z} f^n_{9}(\eta) \mathrm{d}\eta  ~~\text{where}~~ f^n_{12}(z)=\frac{e_{33}e_{31}  -c_{33}c_{13}   }{e_{33}^{2}+c_{33}\xi_{33}} z^n  ~~~~~~~n=0,1\\
+&\hat{f}_{13}(z)=\int_{-h/2}^{z} f^n_{13}(\eta) \mathrm{d}\eta  ~~\text{where}~~ f_{13}(z)= \frac{\xi_{33}}{e_{33}^{2}+c_{33}\xi_{33}}\hat{f}_{6}(z) \\
+&\hat{f}_{14}(z)=\int_{-h/2}^{z} f^n_{14}(\eta) \mathrm{d}\eta  ~~\text{where}~~ f_{14}(z)=\frac{e_{33}}{e_{33}^{2}+c_{33}\xi_{33}} \hat{f}_6(z)\\
+\end{split}
+\end{equation}
+
+
+
+\section{The elastic field in the plate}
+Introducing related functions  into Eqs.\eqref{labeq_gendis} gives rise to the expressions for the
+displacements as
+\begin{equation}
+\begin{split}\label{labeq_displacements}
+u =&  \gamma_{a1} ( -2r^{-1} \hat{f}^0_3  +  r\ln\frac{r}{r_1} ) +  \gamma_{b0} ( r^{-1}\hat{f}_4)  +  \gamma_{b2}(4r^{-1}\hat{f}^1_3- r\hat{f}_4 -2r\ln\frac{r}{r_1}z )   \\
+&+\gamma_{u-1}(r^{-1}) +  \gamma_{u1}(r) + \gamma_{u3} ( -8r\hat{f}^0_3 + r^3)  +  \gamma_{w2} (-2r\hat{f}_4) + \gamma_{w4} (32r\hat{f}^1_3 -4r^3z)\\
+& +  \gamma_{\phi2} (-2r\hat{f}_5)    \\
+w=&    \gamma_{a1} ( -\hat{f}^0_{11} -2\ln\frac{r}{r_1} \hat{f}^0_1 )  + \gamma_{b0}\ln\frac{r}{r_1}   +  \gamma_{b2}(2\hat{f}^4_9 + 2\hat{f}^1_{11} + 4 \ln\frac{r}{r_1} \hat{f}^1_1  +  r^2  \ln\frac{r}{r_1} )  \\
+&+  \gamma_{u1} (- 2\hat{f}^0_{11} ) +  \gamma_{u3} (16 \hat{f}^0_7 - 4r^2\hat{f}^0_1 ) \\
+& + \gamma_{w0}  +  \gamma_{w 2} (4\hat{f}^5_9 +r^2 ) + \gamma_{w4}(-64\hat{f}^1_7 + 16r^2\hat{f}^1_1 + r^4 ) \\
+& + \gamma_{\phi 2} (4\hat{f}^4_{9}+ 4\hat{f}_{13}) \\
+\phi=& \gamma_{a1}  (-\hat{f}^0_{12}  - 2\ln\frac{r}{r_1}\hat{f}^0_2 )    +   \gamma_{b2}(2\hat{f}^4_{10} + 2\hat{f}^1_{12} + 4 \ln\frac{r}{r_1}\hat{f}^1_2 )  + \gamma_{c0} \ln\frac{r}{r_1}  \\
+&+ \gamma_{u1} (-2\hat{f}^0_{12})  +\gamma_{u3} (16\hat{f}^0_{8} - 4r^2\hat{f}^0_2) \\
+&  + \gamma_{w 2} (4\hat{f}^5_{10} + r^2)  +\gamma_{w4} (-64\hat{f}^1_{8} + 16r^2\hat{f}^1_2 )  \\
+&  +\gamma_{\phi0} + \gamma_{\phi 2}( 4\hat{f}^4_{10} +4\hat{f}_{14})
+\end{split}
+\end{equation}
+
+The stress can be written as
+
+\begin{equation}
+\begin{split}\label{labeq_stresses_01}
+\sigma_{r} = &   \gamma_{a1} ( 2c_{11}r^{-2} \hat{f}^0_3  +  c_{11}\ln\frac{r}{r_1} + c_{11} -2c_{12}r^{-2}\hat{f}^0_3 + c_{12}\ln\frac{r}{r_1}    -c_{13}f^0_{11} -2c_{13}\ln\frac{r}{r_1} f^0_1  \\
+&-e_{31}f^0_{12}  - 2e_{31}\ln\frac{r}{r_1}f^0_2  )\\
+&  + \gamma_{b0} (  - c_{11}r^{-2}\hat{f}_4 + c_{12}r^{-2}\hat{f}_4)  \\
+& + \gamma_{b2} ( -4c_{11}r^{-2}\hat{f}^1_3- c_{11}\hat{f}_4 -2c_{11}\ln\frac{r}{r_1}z -2c_{11}z + 4 c_{12}r^{-2}\hat{f}^1_3- c_{12}\hat{f}_4 -2c_{12}\ln\frac{r}{r_1}z\\
+& +2 c_{13} f^4_9 + 2 c_{13} f^1_{11} + 4   c_{13}  \ln\frac{r}{r_1} f^1_1 + 2 e_{31}f^4_{10} + 2 e_{31}f^1_{12} + 4 e_{31}\ln\frac{r}{r_1}f^1_2   )\\
+&+\gamma_{u-1}( -c_{11} r^{-2} + c_{12}r^{-2}) \\
+& + \gamma_{u1}( c_{11} + c_{12}  - 2c_{13}f^0_{11}  - 2e_{31}f^0_{12} )\\
+&+ \gamma_{u3}( -8c_{11}\hat{f}^0_3+  3c_{11}r^2 -8c_{12}\hat{f}^0_3 +  c_{12}r^2  + 16 c_{13}f^0_7 - 4c_{13}r^2f^0_1  +  16e_{31}f^0_{8} - 4e_{31}r^2f^0_2 )\\
+&+ \gamma_{w2}( -2c_{11}\hat{f}_4 -2c_{12}\hat{f}_4 + 4e_{31}f^5_{10} ) \\
+& + \gamma_{w4}(  32c_{11}\hat{f}^1_3 -12c_{11}r^2z +  32c_{12}\hat{f}^1_3 -4c_{12}r^2z   -64c_{13}f^1_7 + 16c_{13}r^2f^1_1 -64e_{31}f^1_{8} + 16e_{31}r^2f^1_2     )\\
+&+  \gamma_{\phi2} (  -2c_{11}\hat{f}_5 -2c_{12}\hat{f}_5 +   4c_{13}f^4_{9}+ 4c_{13}f_{13}  +  4e_{31}f^4_{10} +4e_{31}f_{14} )    \\
+\sigma_{\theta} = &   \gamma_{a1} ( 2c_{12}r^{-2} \hat{f}^0_3  +  c_{12}\ln\frac{r}{r_1} + c_{12} -2c_{11}r^{-2}\hat{f}^0_3 + c_{11}\ln\frac{r}{r_1}    -c_{13}f^0_{11} -2c_{13}\ln\frac{r}{r_1} f^0_1  \\
+&-e_{31}f^0_{12}  - 2e_{31}\ln\frac{r}{r_1}f^0_2  )\\
+&  + \gamma_{b0} (  - c_{12}r^{-2}\hat{f}_4 + c_{11}r^{-2}\hat{f}_4)  \\
+& + \gamma_{b2} ( -4c_{12}r^{-2}\hat{f}^1_3- c_{12}\hat{f}_4 -2c_{12}\ln\frac{r}{r_1}z -2c_{12}z + 4 c_{11}r^{-2}\hat{f}^1_3- c_{11}\hat{f}_4 -2c_{11}\ln\frac{r}{r_1}z\\
+& +2 c_{13} f^4_9 + 2 c_{13} f^1_{11} + 4   c_{13}  \ln\frac{r}{r_1} f^1_1 + 2 e_{31}f^4_{10} + 2 e_{31}f^1_{12} + 4 e_{31}\ln\frac{r}{r_1}f^1_2   )\\
+&+\gamma_{u-1}( -c_{12} r^{-2} + c_{12}r^{-2}) \\
+& + \gamma_{u1}( c_{11} + c_{12}  - 2c_{13}f^0_{11}  - 2e_{31}f^0_{12} )\\
+&+ \gamma_{u3}( -8c_{12}\hat{f}^0_3+  3c_{12}r^2 -8c_{11}\hat{f}^0_3 +  c_{11}r^2  + 16 c_{13}f^0_7 - 4c_{13}r^2f^0_1  +  16e_{31}f^0_{8} - 4e_{31}r^2f^0_2 )\\
+&+ \gamma_{w2}( -2c_{12}\hat{f}_4 -2c_{11}\hat{f}_4 + 4e_{31}f^5_{10} ) \\
+& + \gamma_{w4}(  32c_{12}\hat{f}^1_3 -12c_{12}r^2z +  32c_{11}\hat{f}^1_3 -4c_{11}r^2z   -64c_{13}f^1_7 + 16c_{13}r^2f^1_1 -64e_{31}f^1_{8} + 16e_{31}r^2f^1_2     )\\
+&+  \gamma_{\phi2} (  -2c_{12}\hat{f}_5 -2c_{11}\hat{f}_5 +   4c_{13}f^4_{9}+ 4c_{13}f_{13}  +  4e_{31}f^4_{10} +4e_{31}f_{14} )    \\
+\sigma_{z} = &   \gamma_{a1} (   2c_{13}\ln\frac{r}{r_1} + c_{13}  + c_{13}\ln\frac{r}{r_1}    -c_{33}f^0_{11} -2c_{33}\ln\frac{r}{r_1} f^0_1  -e_{33}f^0_{12}  - 2e_{33}\ln\frac{r}{r_1}f^0_2  )\\
+& + \gamma_{b2} ( - 2c_{13}\hat{f}_4 -4c_{13}\ln\frac{r}{r_1}z -2c_{13}z \\
+& +2 c_{33} f^4_9 + 2 c_{33} f^1_{11} + 4   c_{33}  \ln\frac{r}{r_1} f^1_1 + 2 e_{33}f^4_{10} + 2 e_{33}f^1_{12} + 4 e_{33}\ln\frac{r}{r_1}f^1_2   )\\
+& + \gamma_{u1}( 2c_{13}  - 2c_{33}f^0_{11}  - 2e_{33}f^0_{12} )\\
+&+ \gamma_{u3}( -16c_{13}\hat{f}^0_3+  4c_{13}r^2  + 16 c_{33}f^0_7 - 4c_{33}r^2f^0_1  +  16e_{33}f^0_{8} - 4e_{33}r^2f^0_2 )\\
+&+ \gamma_{w2}( -4c_{13}\hat{f}_4  + 4e_{33}f^5_{10} ) \\
+& + \gamma_{w4}(  64c_{13}\hat{f}^1_3  -16c_{13}r^2z   -64c_{33}f^1_7 + 16c_{33}r^2f^1_1 -64e_{33}f^1_{8} + 16e_{33}r^2f^1_2)\\
+&+  \gamma_{\phi2} (  -4c_{13}\hat{f}_5  +   4c_{33}f^4_{9}+ 4c_{33}f_{13}  +  4e_{33}f^4_{10} +4e_{33}f_{14} )    \\
+\end{split}
+\end{equation}
+\begin{equation}
+\begin{split}\label{labeq_stresses_02}
+\tau_{rz} =  &\gamma_{a1} ( -2c_{44} r^{-1}f^0_3  - 2c_{44}\hat{f}^0_1 - 2e_{15}\hat{f}^0_2       )\\
+&  + \gamma_{b0} ( c_{44}r^{-1}f_4    +  c_{44}    )  \\
+& + \gamma_{b2} ( 4c_{44}r^{-1}f^1_3- c_{44}rf_4 -2c_{44}r\ln\frac{r}{r_1}  +   4 c_{44} \hat{f}^1_1  +   2c_{44}r\ln\frac{r}{r_1}  +   c_{44}r^2  +  4e_{15}\hat{f}^1_2 )\\
+&+ \gamma_{u3}( -8c_{44}rf^0_3  - 8c_{44} r \hat{f}^0_1 - 8e_{15}r\hat{f}^0_2 )\\
+&+ \gamma_{w2}( -2c_{44}rf_4  +  2c_{44}r + 2e_{15}r  ) \\
+& + \gamma_{w4}( 32c_{44}rf^1_3 -4c_{44}r^3 +   32c_{44}r\hat{f}^1_1 + 4c_{44}r^3  + 32e_{15}r\hat{f}^1_2     )\\
+&+  \gamma_{\phi2} ( -2c_{44}rf_5   )    \\
+D_{r} =  &\gamma_{a1} ( -2e_{15} r^{-1}f^0_3  - 2e_{15}\hat{f}^0_1 + 2\xi_{11}\hat{f}^0_2       )\\
+&  + \gamma_{b0} ( e_{15}r^{-1}f_4    - \xi_{11}   )  \\
+& + \gamma_{b2} ( e_{15}r^{-1}f^1_3- e_{15}rf_4 -2e_{15}r\ln\frac{r}{r_1}  +   4 e_{15} \hat{f}^1_1  +   2e_{15}r\ln\frac{r}{r_1}  +   e_{15}r^2- 4\xi_{11}\hat{f}^1_2 )\\
+&+ \gamma_{u3}( -8e_{15}rf^0_3  - 8e_{15} r \hat{f}^0_1 + 8\xi_{11}r\hat{f}^0_2 )\\
+&+ \gamma_{w2}( -2e_{15}rf_4  +  2e_{15}r - 2\xi_{11}r  ) \\
+& + \gamma_{w4}( 32e_{15}rf^1_3 -4e_{15}r^3 +   32e_{15}r\hat{f}^1_1 + 4e_{15}r^3  - 32\xi_{11}r\hat{f}^1_2     )\\
+&+  \gamma_{\phi2} ( -2e_{15}rf_5   )    \\
+D_{z} = &   \gamma_{a1} (   2e_{31}\ln\frac{r}{r_1} + e_{31}  + e_{31}\ln\frac{r}{r_1}    -e_{33}f^0_{11} -2e_{33}\ln\frac{r}{r_1} f^0_1  + \xi_{33}f^0_{12}  + 2\xi_{33}\ln\frac{r}{r_1}f^0_2  )\\
+& + \gamma_{b2} ( - 2e_{31}\hat{f}_4 -4e_{31}\ln\frac{r}{r_1}z -2e_{31}z \\
+& +2 e_{33} f^4_9 + 2 e_{33} f^1_{11} + 4   e_{33}  \ln\frac{r}{r_1} f^1_1 - 2 \xi_{33}f^4_{10} - 2\xi_{33}f^1_{12} -
+ 4\xi_{33}\ln\frac{r}{r_1}f^1_2   )\\
+& + \gamma_{u1}( 2e_{31} - 2e_{33}f^0_{11}  + 2\xi_{33}f^0_{12} )\\
+&+ \gamma_{u3}( -16e_{31}\hat{f}^0_3+  4e_{31}r^2  + 16 e_{33}f^0_7 - 4e_{33}r^2f^0_1  - 16\xi_{33}f^0_{8} + 4\xi_{33}r^2f^0_2 )\\
+&+ \gamma_{w2}( -4e_{31}\hat{f}_4 - 4\xi_{33}f^5_{10} ) \\
+& + \gamma_{w4}(  64e_{31}\hat{f}^1_3  -16e_{31}r^2z   -64e_{33}f^1_7 + 16e_{33}r^2f^1_1 + 64\xi_{33}f^1_{8} - 16\xi_{33}r^2f^1_2)\\
+&+  \gamma_{\phi2} (  -4e_{31}\hat{f}_5  +   4e_{33}f^4_{9}+ 4e_{33}f_{13}- 4\xi_{33}f^4_{10} -4\xi_{33}f_{14} )    \\
+\end{split}
+\end{equation}
+
+
+
+
+It is easy to obtain the expressions for the radial resultant force $N(r)$ and the bending moment ${M}(r)$
+by integrating  Eq.\eqref{labeq_stresses_01} as 
+\begin{equation}
+\begin{split}\label{labeq_MN}
+N(r)=\int_{-h/2}^{h/2}\sigma_{r}\mathrm{d}z=& \gamma_{a1}L^0_{a1} +\gamma_{b0}L^0_{b0}+ +\gamma_{b2}L^0_{b2}+\gamma_{u-1}L^0_{u-1}+\gamma_{u1}L^0_{u1} +\gamma_{u3}L^0_{u3} \\
+&+ \gamma_{w0}L^0_{u3}  +\gamma_{w4}L^0_{w4} +\gamma_{\phi 2}L^0_{\phi 2} \\
+M(r)=\int_{-h/2}^{h/2}\sigma_{r}z\mathrm{d}z=& \gamma_{a1}L^1_{a1} +\gamma_{b0}L^1_{b0}+ +\gamma_{b2}L^1_{b2}+\gamma_{u-1}L^1_{u-1}+\gamma_{u1}L^1_{u1} +\gamma_{u3}L^1_{u3}\\
+&+ \gamma_{w0}L^1_{u3}  +\gamma_{w4}L^1_{w4} +\gamma_{\phi 2}L^1_{\phi 2} \\
+\end{split}
+\end{equation}
+where
+\begin{equation}\label{labeq_MN_L}
+\begin{split}
+L^n_{a1}= &\int_{-h/2}^{h/2}z^{n}( 2c_{11}r^{-2} \hat{f}^0_3  +  c_{11}\ln\frac{r}{r_1} + c_{11} -2c_{12}r^{-2}\hat{f}^0_3 + c_{12}\ln\frac{r}{r_1}    -c_{13}f^0_{11} -2c_{13}\ln\frac{r}{r_1} f^0_1  \\
+&-e_{31}f^0_{12}  - 2e_{31}\ln\frac{r}{r_1}f^0_2 ) z^n \mathrm{d}z\\
+L^n_{b0}= &\int_{-h/2}^{h/2}(  - c_{11}r^{-2}\hat{f}_4 + c_{12}r^{-2}\hat{f}_4)z^n\mathrm{d}z\\
+L^n_{b2}=&\int_{-h/2}^{h/2}( -4c_{11}r^{-2}\hat{f}^1_3- c_{11}\hat{f}_4 -2c_{11}\ln\frac{r}{r_1}z -2c_{11}z + 4 c_{12}r^{-2}\hat{f}^1_3- c_{12}\hat{f}_4 -2c_{12}\ln\frac{r}{r_1}z\\
+& +2 c_{13} f^4_9 + 2 c_{13} f^1_{11} + 4   c_{13}  \ln\frac{r}{r_1} f^1_1 + 2 e_{31}f^4_{10} + 2 e_{31}f^1_{12} + 4 e_{31}\ln\frac{r}{r_1}f^1_2   )z^n\mathrm{d}z\\
+L^n_{u-1} =&\int_{-h/2}^{h/2}( -c_{11} r^{-2} + c_{12}r^{-2})z^n\mathrm{d}z\\
+L^n_{u1} =&\int_{-h/2}^{h/2}( c_{11} + c_{12}  - 2c_{13}f^0_{11}  - 2e_{31}f^0_{12} )z^n\mathrm{d}z\\
+L^n_{u3} =&\int_{-h/2}^{h/2}( -8c_{11}\hat{f}^0_3+  3c_{11}r^2 -8c_{12}\hat{f}^0_3 +  c_{12}r^2  + 16 c_{13}f^0_7 - 4c_{13}r^2f^0_1  +  16e_{31}f^0_{8} - 4e_{31}r^2f^0_2 )z^n\mathrm{d}z\\
+L^n_{w2} =&\int_{-h/2}^{h/2}( -2c_{11}\hat{f}_4 -2c_{12}\hat{f}_4 + 4e_{31}f^5_{10} )z^n\mathrm{d}z\\
+L^n_{w4}=&\int_{-h/2}^{h/2}(  32c_{11}\hat{f}^1_3 -12c_{11}r^2z +  32c_{12}\hat{f}^1_3 -4c_{12}r^2z   -64c_{13}f^1_7\\
+ &+ 16c_{13}r^2f^1_1 -64e_{31}f^1_{8} + 16e_{31}r^2f^1_2     )z^n\mathrm{d}z\\
+L^n_{\phi2} =&\int_{-h/2}^{h/2}(  -2c_{11}\hat{f}_5 -2c_{12}\hat{f}_5 +   4c_{13}f^4_{9}+ 4c_{13}f_{13}  +  4e_{31}f^4_{10} +4e_{31}f_{14} )z^n\mathrm{d}z\\
+\end{split}
+\end{equation}
+
+
+According to Eq.~\eqref{labeq_stresses_02}, the resultant shear force $Q(r)$ can be obtained as 
+\begin{equation}\label{labeq_Q}
+\begin{split}
+Q(r)=&\int_{-h/2}^{h/2}\tau_{rz}\mathrm{d}z\\
+ =& \gamma_{a1}\Gamma_{a1} +\gamma_{b0}\Gamma_{b0}+ +\gamma_{b2}\Gamma_{b2} +\gamma_{u3}\Gamma_{u3}   +\gamma_{w2}\Gamma_{w2}+\gamma_{w4}\Gamma_{w4} +\gamma_{\phi 2}\Gamma_{\phi 2} \\
+\end{split}
+\end{equation}
+where
+\begin{equation}\label{labeq_Q_Gamma}
+\begin{split}
+\Gamma_{a1}= &\int_{-h/2}^{h/2}z^{n}( -2c_{44} r^{-1}f^0_3  - 2c_{44}\hat{f}^0_1 - 2e_{15}\hat{f}^0_2 )\mathrm{d}z\\
+\Gamma_{b0}= &\int_{-h/2}^{h/2}( c_{44}r^{-1}f_4    +  c_{44}    )\mathrm{d}z\\
+\Gamma_{b2}=&\int_{-h/2}^{h/2}( 4c_{44}r^{-1}f^1_3- c_{44}rf_4 -2c_{44}r\ln\frac{r}{r_1}  +   4 c_{44} \hat{f}^1_1  +   2c_{44}r\ln\frac{r}{r_1}  +   c_{44}r^2  +  4e_{15}\hat{f}^1_2 )\mathrm{d}z\\
+\Gamma_{u3} =&\int_{-h/2}^{h/2}( -8c_{44}rf^0_3  - 8c_{44} r \hat{f}^0_1 - 8e_{15}r\hat{f}^0_2 )\mathrm{d}z\\
+\Gamma_{w2} =&\int_{-h/2}^{h/2}( -2c_{44}rf_4  +  2c_{44}r + 2e_{15}r  )\mathrm{d}z\\
+\Gamma_{w4}=&\int_{-h/2}^{h/2}( 32c_{44}rf^1_3 -4c_{44}r^3 +   32c_{44}r\hat{f}^1_1 + 4c_{44}r^3  + 32e_{15}r\hat{f}^1_2     )\mathrm{d}z\\
+\Gamma_{\phi2} =&\int_{-h/2}^{h/2}( -2c_{44}rf_5   )\mathrm{d}z\\
+\end{split}
+\end{equation}
+
+
+
+
+\section{Integral constants}
+
+There are total $12$ integral constants to be determined. They are $\gamma_{a1}$,  $\gamma_{b0}$, $\gamma_{b2}$, $\gamma_{c0}$,
+$\gamma_{u-1}$, $\gamma_{u1}$, $\gamma_{u3}$, $\gamma_{w0}$, $\gamma_{w2}$, $\gamma_{w4}$, $\gamma_{\phi0}$  and  $\gamma_{\phi 2}$.
+\subsection{Simply supported plate}
+For a FGM plate with simply supported edges at $r =r_i $(i = 0, 1), the cylindrical boundary
+conditions are
+\begin{equation}\label{labeq_bounday_simply}
+w(r_i,0)=0, \; \phi(r_i,0)=0,\; N(r_i)=0,\; M(r_i)=0  \;   (i=0,1)
+\end{equation}
+Introducing  Eqs.~\eqref{labeq_displacements} and  \eqref{labeq_MN}  into Eq.~\eqref{labeq_bounday_simply} results in eight equations, corresponding to boundary conditions at $r=r_0 $and $r=r_1$.  Furthermore, combining another four conditions in Eqs.~\eqref{labeq_b2a1_constrain}, \eqref{labeq_w4u3_constrain} and \eqref{labeq_w4u3phi2_constrain}, there constitute twelve simultaneous linear algebraic equations, which can fully determine the explicit expression forms of displacements.
+
+
+
+
+
+
+
+
+\subsection{Clamped plate}
+In this circumstance, the boundary conditions at $r= r_i$ (i=0, 1) are
+\begin{equation}\label{labeq_bounday_clamped}
+u(r_i,0)=0\; w(r_i,0)=0, \;w_{,r}(r_i,0)=0, \;  \phi(r_i,0)=0,\;    (i=0,1)
+\end{equation}
+Substituting Eqs.~\eqref{labeq_displacements} and  \eqref{labeq_MN}   into the conditions above,  and linking with Eqs.~\eqref{labeq_b2a1_constrain}, \eqref{labeq_w4u3_constrain} and \eqref{labeq_w4u3phi2_constrain}  form 12 linear algebraic equations eventually. Therefore, all the integral constants in the displacement functions are determined.
+\subsection{Simply supported-clamped plate}
+The boundary conditions are
+\begin{equation}\label{labeq_bounday_simcla_01}
+N(r_0)=0, \; M(r_0)=0, \;w_{,r}(r_0,0)=0, \;  \phi(r_0,0)=0,\;
+\end{equation}
+\begin{equation}\label{labeq_bounday_simcla_02}
+u(r_1,0)=0\; w(r_1,0)=0, \;w_{,r}(r_1,0)=0, \;  \phi(r_1,0)=0,\;
+\end{equation}
+The integral constants in the displacement functions can be determined when combining Eqs.~\eqref{labeq_bounday_simcla_01} and   \eqref{labeq_bounday_simcla_02} with Eqs.~\eqref{labeq_b2a1_constrain}, \eqref{labeq_w4u3_constrain} and \eqref{labeq_w4u3phi2_constrain}.
+\subsection{Clamped-simply supported plate}
+In this case, the plate is internally clamped and externally simply supported, the boundary conditions $r=r_i$(i=0,1) are then presented as
+\begin{equation}\label{labeq_bounday_clasim_01}
+u(r_0,0)=0\; w(r_0,0)=0, \;w_{,r}(r_0,0)=0, \;  \phi(r_0,0)=0,\;
+\end{equation}
+\begin{equation}\label{labeq_bounday_clasim_02}
+N(r_1)=0, \; M(r_1)=0, \;w_{,r}(r_1,0)=0, \;  \phi(r_1,0)=0,\;
+\end{equation}
+The integral constants in the displacement functions can be determined in the same way.
+\subsection{Free-clamped plate}
+In this instance, the boundary conditions at the cylindrical surfaces read
+\begin{equation}\label{labeq_bounday_free_01}
+N(r_0)=0, \; M(r_0)=0, \;Q(r_0)=0, \;  \phi(r_0,0)=0,\;
+\end{equation}
+\begin{equation}\label{labeq_bounday_free_02}
+u(r_1,0)=0\; w(r_1,0)=0, \;w_{,r}(r_1,0)=0, \;  \phi(r_0,0)=0,\;
+\end{equation}
+Hence all the integral constants are fixed by solving   Eqs.~\eqref{labeq_bounday_free_01}, \eqref{labeq_bounday_free_02}      \eqref{labeq_b2a1_constrain}, \eqref{labeq_w4u3_constrain} and \eqref{labeq_w4u3phi2_constrain}  simultaneously.
+On the basis of analysis above, the displacements and stresses of the plates with diverse edge conditions can be expressed in an explicit fashion.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\appendix
+\renewcommand\thetable{\arabic{table}}
+\renewcommand\thefigure{\arabic{figure}}
+\setcounter{equation}{0}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Discussion on the form of Eq.\eqref{labeq_gendis}}
+This section is devoted to justification of the form of the displacements in Eq.~\eqref{labeq_gendis}.  According to the form of displacements in a homogeneous annular plate presented in [45], we assume
+\begin{equation}\label{labeq_appBdis}
+\begin{split}
+u(r,z)=&\qiuhe r^{m} \left[\jiaobiao{u}{m}(z)+\jiaobiao{A}{m}(z) \ln(r/r_{1})\right]\\
+w(r,z)=&\qiuhe r^{m} [\jiaobiao{w}{m}(z)+\jiaobiao{B}{m}(z) \ln(r/r_{1})]\\
+\phi (r,z)=&\qiuhe r^{m} [\jiaobiao{\phi}{m}(z)+\jiaobiao{C}{m}(z) \ln(r/r_{1})]\\
+\end{split}
+\end{equation}
+where $ \jiaobiao{u}{m}(z),\jiaobiao{w}{m}(z),\jiaobiao{\phi}{m}(z),\jiaobiao{A}{m}(z),\jiaobiao{B}{m}(z)  $     and  $ \jiaobiao{C}{m}(z) $ are referred to as the displacement functions.
+
+Introducing Eq.~\eqref{labeq_appBdis} into constitutive equation  in  Eq.~\eqref{labeq_ConsEq} obtain the stress and electric displacement as
+\begin{subequations}\label{labeq_AppBstress}
+\begin{equation}
+\begin{split}\label{labeq_AppBstress_01}
+\sigma_r =&\qiuhe r^{m}\{[(m+1)c_{11}+c_{12}]u_{m+1}+c_{11}A_{m+1}+c_{13}w_{m,z}+e_{31}\phi_{m,z}\\
+&+[(m+1)c_{11}A_{m+1}+c_{12}A_{m+1}+c_{13}B_{m,z}+e_{31}C_{m,z}]\ln(r/r_{1})\}\\
+\end{split}
+\end{equation}
+\begin{equation}
+\begin{split}\label{labeq_AppBstress_02}
+\sigma_{\theta}= &\qiuhe r^{m}\{[(m+1)c_{12}+c_{11}]u_{m+1}+c_{12}A_{m+1}+c_{13}w_{m,z}+e_{31}\phi_{m,z}\\
+&+[(m+1)c_{12}A_{m+1}+c_{11}A_{m+1}+c_{13}B_{m,z}+e_{31}C_{m,z}]\ln(r/r_{1})\}\\
+\end{split}
+\end{equation}
+\begin{equation}
+\begin{split}\label{labeq_AppBstress_03}
+\sigma_z=&\qiuhe r^{m}\{[(m+2)c_{13}u_{m+1}+c_{13}A_{m+1}+c_{33}w_{m,z}+e_{33}\phi_{m,z}\\
+&+[(m+2)c_{13}A_{m+1}+c_{33}B_{m,z}+e_{33}C_{m,z}]\ln(r/r_{1})\}\\
+\end{split}
+\end{equation}
+\begin{equation}
+\begin{split}\label{labeq_AppBstress_04}
+\tau_{rz}=&\qiuhe r^m \{c_{44}u_{m,z}+(m+1)c_{44}w_{m+1}+c_{44}B_{m+1}+(m+1)e_{15}\phi_{m+1}\\
+&+e_{15}C_{m+1}+[c_{44}A_{m,z} + (m+1)c_{44}B_{m+1}+(m+1)e_{15}C_{m+1}]\ln(r/r_{1})\}\\
+\end{split}
+\end{equation}
+\begin{equation}
+\begin{split}\label{labeq_AppBstress_05}
+D_r=&\qiuhe r^m \{e_{15}u_{m,z}+(m+1)e_{15}w_{m+1} +e_{15}B_{m+1}  -(m+1)\xi_{11}\phi_{m+1}\\
+&-\xi_{11}C_{m+1}+[ e_{15}A_{m,z} + (m+1)e_{15}B_{m+1} -(m+1)\xi_{11}C_{m+1}]\ln(r/r_{1})\}\\
+\end{split}
+\end{equation}
+\begin{equation}
+\begin{split}\label{labeq_AppBstress_06}
+D_z=&\qiuhe r^m \{(m+2)e_{31}u_{m+1}+e_{31}A_{m+1}+e_{33}w_{m,z}-\xi_{33}\phi_{m,z}\\
+&+[(m+2)e_{31}A_{m+1}+e_{33}B_{m,z}-\xi_{33}C_{m,z}]\ln(r/r_{1})\}\\
+\end{split}
+\end{equation}
+\end{subequations}
+
+Substituting Eq.~\eqref{labeq_AppBstress} into  equilibrium equation  Eq.~\eqref{labeq_balanceEq} and   comparing the coefficients of $r^m$ and $r^m \ln(r/r_1)$ at the two ends, we obtain
+\begin{subequations}\label{labeq_AppBsimitem}
+\begin{equation}\label{labeq_AppBsimitem_01}
+\begin{split}
+&\qiudao{[ \jiaobiao{c}{44}\qiudao{A}{m+1}{z} + (m+2)\jiaobiao{c}{44}\jiaobiao{B}{m+2}+(m+2)e_{15}C_{m+2}]}{}{z}\\
+&+(m+2)(m+4)\er{c}{11}{A}{m+3}+(m+2)\de{c}{13}{B}{m+2}{z}+(m+2)\de{e}{31}{C}{m+2}{z}=0
+\end{split}
+\end{equation}
+\begin{equation}\label{labeq_AppBsimitem_02}
+\begin{split}
+&\qiudao{[ c_{44}\qiudao{u}{m+1}{z}+(m+2)c_{44}\jiaobiao{w}{m+2}+c_{44}\jiaobiao{B}{m+2}+(m+2)e_{15}\phi_{m+2}+ e_{15}C_{m+2}]}{}{z}\\
+&+(m+2)(m+4)\er{c}{11}{u}{m+3} +2(m+3)\er{c}{11}{A}{m+3}  +(m+2) \jiaobiao{c}{13}\qiudao{w}{m+2}{z}\\
+&+ \jiaobiao{c}{13}\qiudao{B}{m+2}{z}+(m+2)\jiaobiao{e}{31}\phi_{m+2,z}+\jiaobiao{e}{31}\qiudao{C}{m+2}{z}=0
+\end{split}
+\end{equation}
+\begin{equation}\label{labeq_AppBsimitem_03}
+\begin{split}
+&\qiudao{[(m+2)\er{c}{13}{A}{m+1}+\de{c}{33}{B}{m}{z}+\de{e}{33}{C}{m}{z}]}{}{z}\\
+&+(m+2)\jiaobiao{c}{44}\qiudao{A}{m+1}{z} + (m+2)^2\jiaobiao{c}{44}\jiaobiao{B}{m+2}+(m+2)^{2}\er{e}{15}{C}{m+2}=0
+\end{split}
+\end{equation}
+\begin{equation}\label{labeq_AppBsimitem_05}
+\begin{split}
+&\qiudao{[(m+2) c_{13} u_{m+1}+  c_{13}A_{m+1}+\de{c}{33}{w}{m}{z}+\de{e}{33}{\phi}{m}{z}]}{}{z}\\
+&+(m+2)\jiaobiao{c}{44}\qiudao{u}{m+1}{z}+\jiaobiao{c}{44}\qiudao{A}{m+1}{z}+(m+2)^{2}\jiaobiao{c}{44}\jiaobiao{w}{m+2}+2(m+2)\jiaobiao{c}{44}\jiaobiao{B}{m+2}\\
+&+(m+2)^2\jiaobiao{e}{15}\phi_{m+2}+2(m+2)\jiaobiao{e}{15}C_{m+2}=0
+\end{split}
+\end{equation}
+\begin{equation}\label{labeq_AppBsimitem_05}
+\begin{split}
+&\qiudao{[(m+2)\er{e}{31}{A}{m+1}+\de{e}{33}{B}{m}{z}-\de{\xi}{33}{C}{m}{z}]}{}{z}\\
+&+(m+2)\jiaobiao{e}{15} \qiudao{A}{m+1}{z}+   (m+2)^2 \jiaobiao{e}{15} \jiaobiao{B}{m+2}-(m+2)^{2}\jiaobiao{\xi}{11}\jiaobiao{C}{m+2}=0
+\end{split}
+\end{equation}
+\begin{equation}\label{labeq_AppBsimitem_06}
+\begin{split}
+&\qiudao{[ (m+2)e_{31}u_{m+1}+e_{31}A_{m+1}+\de{e}{33}{w}{m}{z}-\de{\xi}{33}{\phi}{m}{z}]}{}{z}\\
+&+ (m+2) \jiaobiao{e}{15} \qiudao{u}{m+1}{z}    + \jiaobiao{e}{15} \qiudao{A}{m+1}{z} + (m+2)^{2}\jiaobiao{e}{15}\jiaobiao{w}{m+2}  +  2(m+2)\jiaobiao{e}{15}\jiaobiao{B}{m+2}\\
+&- (m+2)^2\jiaobiao{\xi}{11}\phi_{m+2}-2(m+2)\jiaobiao{\xi}{11}C_{m+2}=0
+\end{split}
+\end{equation}
+\end{subequations}
+
+
+
+Substituting  Eqs.~\eqref{labeq_AppBstress_03},   \eqref{labeq_AppBstress_04}  and  \eqref{labeq_AppBstress_05}   into Eq.~\eqref{labeq_bouncondi} and comparing the coefficients of $r^m$ and $r^m \ln(r/r_1)$, we can derive
+\begin{subequations}\label{labeq_AppBboundcon}
+\begin{equation}\label{labeq_AppBboundcon_01}
+\begin{split}
+&[c_{44}A_{m+1,z} + (m+2)c_{44}B_{m+2}+(m+2)e_{15}C_{m+2}]\big|_{z=\pm h/2}=0\\
+\end{split}
+\end{equation}
+\begin{equation}\label{labeq_AppBboundcon_02}
+\begin{split}
+&[c_{44}u_{m+1,z}+(m+2)c_{44}w_{m+2}+c_{44}B_{m+2}+(m+2)e_{15}\phi_{m+2}\\
+&+e_{15}C_{m+2}]\big|_{z=\pm h/2}=0\\
+\end{split}
+\end{equation}
+\begin{equation}\label{labeq_AppBboundcon_03}
+\begin{split}
+&[(m+2)\er{e}{31}{A}{m+1}+\de{e}{33}{B}{m}{z}-\de{\xi}{33}{C}{m}{z}]\big|_{z=\pm h/2}=0\\
+\end{split}
+\end{equation}
+\begin{equation}\label{labeq_AppBboundcon_04}
+\begin{split}
+&[(m+2)\er{e}{31}{u}{m+1}+\er{e}{31}{A}{m+1}+\de{e}{33}{w}{m}{z}-\de{\xi}{33}{\phi}{m}{z}]\big|_{z=\pm h/2}=0\\
+\end{split}
+\end{equation}
+\begin{equation}\label{labeq_AppBboundcon_05}
+\begin{split}
+&[(m+2)\er{c}{13}{A}{m+1}+\de{c}{33}{B}{m}{z}+\de{e}{33}{C}{m}{z}]\big|_{z=\pm h/2}=0\\
+\end{split}
+\end{equation}
+\begin{equation}
+\begin{split}
+&[(m+2)c_{13}u_{m+1}+ c_{13}A_{m+1}+\de{c}{33}{w}{m}{z}+\de{e}{33}{\phi}{m}{z}] \big|_{z=h/2}= -q\delta_{m0} \\
+&[(m+2)c_{13}u_{m+1}+ c_{13}A_{m+1}+\de{c}{33}{w}{m}{z}+\de{e}{33}{\phi}{m}{z}]\big|_{z=-h/2}=0\\
+\end{split}
+\end{equation}
+\end{subequations}
+where $\delta_{m0}$ is the Kronecker delta.
+
+When $m\neq-2,\;{m}\neq-4$, if we let
+\begin{equation}\label{labeq_AppBasume}
+\begin{split}
+&\jiaobiao{A}{m+1}=0,\; \jiaobiao{u}{m+1}=0,\; \jiaobiao{B}{m}=0,\;
+&\jiaobiao{w}{m}=0,\jiaobiao{C}{m}=0, \; \jiaobiao{\phi}{m}=0,
+\end{split}
+\end{equation}
+and substitute  Eq.~\eqref{labeq_AppBasume} into  Eq.~\eqref{labeq_AppBsimitem},  we can obtain
+\begin{equation}\label{labeq_AppBextension}
+\begin{split}
+&\jiaobiao{A}{m+3}=0,\, \jiaobiao{u}{m+3}=0,\, \jiaobiao{B}{m+2}=0,\, \\
+&\jiaobiao{w}{m+2}=0,\,\jiaobiao{C}{m+2}=0, \, \jiaobiao{\phi}{m+2}=0.\;
+\end{split}
+\end{equation}
+
+According to Eqs.~\eqref{labeq_AppBasume} and .~\eqref{labeq_AppBextension}, we assume  all the  items  with $m$  being  odd number, i.e. $m = 2n-1, ~ n \in Z$,  will  vanish, thus we have
+\begin{equation}\label{labeq_AppBextension_odd}
+\begin{split}
+&\jiaobiao{A}{2n+2}=0,\, \jiaobiao{u}{2n+2}=0,\, \jiaobiao{B}{2n+2}=0,\,\\
+&\jiaobiao{w}{2n+1}=0,\,\jiaobiao{\phi}{2n+1}=0, \, \jiaobiao{C}{2n+1}=0.\;    ~~~~ n \in Z
+\end{split}
+\end{equation}
+In this case,  the boundary  conditions  in   Eq.~\eqref{labeq_AppBboundcon}   are automatically satisfied. For the case of  $m$ is even number,   we also assume
+\begin{equation}\label{labeq_AppBextension_even}
+\begin{split}
+&\jiaobiao{A}{2n+3}=0,\, \jiaobiao{u}{2n+3}=0,\, \jiaobiao{B}{2n+2}=0,\,\\
+&\jiaobiao{w}{2n+2}=0,\,\jiaobiao{C}{2n+2}=0, \, \jiaobiao{\phi}{2n+2}=0.\;    ~~~~ n \in Z ~~\text{and} ~~|n| >2
+\end{split}
+\end{equation}
+without loss of generality. In this case,  the boundary conditions  are  also  satisfied.
+
+
+Therefor, we should discuss  the cases of $m = -4, -2 , 0, 2 $, and $4$  step by step  to determine  which items  in  Eq.~\eqref{labeq_appBdis}  should be retained.
+
+~\\
+\textbf{Case $m=-4$}
+
+
+
+For $m=-4$, using $\jiaobiao{A}{-3}=0,\; \jiaobiao{u}{-3}=0,\; \jiaobiao{B}{-4},\; \jiaobiao{w}{-4}=0,\jiaobiao{\phi}{-4}=0, \; \jiaobiao{C}{-4}=0, \label{A.18},$ according Eq.~\eqref{labeq_AppBextension_even} with $n=-3$,  we can obtain from Eqs.~\eqref{labeq_AppBsimitem} that
+\begin{subequations}\label{labeq_AppBsimitem-4}
+\begin{equation}
+\qiudao{[c_{44}B_{-2} + c_{44}C_{-2}]}{}{z} + c_{13}B_{-2,z} + e_{31}C_{-2,z} = 0\\
+\end{equation}
+\begin{equation}
+\begin{split}
+&\qiudao{[-2c_{44}w_{-2}+c_{44}B_{-2}-2e_{15}\phi_{-2}+e_{15}C_{-2}]}{}{z} \\
+&-2\er{c}{11}{A}{-1}-2c_{13}\qiudao{w}{-2}{z}+c_{13}\qiudao{B}{-2}{Z}-2e_{31}\qiudao{\phi}{-2}{z}+e_{31}\qiudao{C}{-2}{z}=0
+\end{split}
+\end{equation}
+\begin{equation}
+\er{c}{44}{B}{-2}+\er{e}{15}{C}{-2}=0\\
+\end{equation}
+\begin{equation}
+c_{44}w_{-2} -c_{44}B_{-2} + e_{15}\phi_{-2} - e_{15}C_{-2} = 0
+\end{equation}
+\begin{equation}
+\er{e}{15}{B}{-2}-\er{\xi}{11}{C}{-2}=0\\
+\end{equation}
+\begin{equation}
+e_{15}w_{-2} -e_{15}B_{-2} - \xi_{11}\phi_{-2} + \xi_{11}C_{-2} = 0
+\end{equation}
+\end{subequations}
+Solving Eq.~\eqref{labeq_AppBsimitem-4} can give
+\begin{equation}\label{labeq_m-4zeros}
+A_{-1}=0,\;  B_{-2}=0,\; C_{-2}=0,\; w_{-2}=0,\; \phi_{-2}=0.
+\end{equation}
+
+
+~\\
+\textbf{Case $m=-2$}
+
+When $m=-2$,   except for Eq.~\eqref{labeq_AppBsimitem_02}  a in Eq.~\eqref{labeq_AppBsimitem}, all the other items are satisfied automatically. In this case, Eq.~\eqref{labeq_AppBsimitem_02} can be rewritten as
+\begin{equation}\label{labeq_AppBsimitem-2}
+\qiudao{[c_{44}\qiudao{u}{-1}{z} + c_{44}B_{0} + \er{e}{15}{c}{0}]}{}{z}+ 2\er{c}{11}{A}{1} + \de{c}{13}{B}{0}{z}+\de{e}{31}{C}{0}{z}=0,
+\end{equation}
+and the corresponding boundary condition  in Eq.~\eqref{labeq_AppBboundcon_02} can be rewritten as
+\begin{equation}\label{labeq_AppBboundcon-2}
+[c_{44}\qiudao{u}{-1}{z}+ c_{44}B_{0}+\er{e}{15}{C}{0}]\big|_{z=\pm h/2}=0.
+\end{equation}
+
+
+~\\
+\textbf{Case $m=4$}
+
+In the case of m=4, by making use of $  \jiaobiao{A}{7}=0,\; \jiaobiao{u}{7}=0,\; \jiaobiao{B}{6},\;  \jiaobiao{w}{6}=0,\jiaobiao{\phi}{6}=0, \; \jiaobiao{C}{6}=0. \;$  according Eq.~\eqref{labeq_AppBextension_even} with $n=3$,  we can obtain from Eqs.~\eqref{labeq_AppBsimitem} that
+\begin{subequations}\label{labeq_AppBsimitem+4}
+\begin{equation}\label{labeq_AppBsimitem+41}
+\qiudao{[\de{c}{44}{A}{5}{z}]}{}{z}=0
+\end{equation}
+\begin{equation}\label{labeq_AppBsimitem+42}
+\qiudao{[\de{c}{44}{u}{5}{z}]}{}{z}=0
+\end{equation}
+\begin{equation}\label{labeq_AppBsimitem+43}
+\qiudao{[6\er{c}{13}{A}{5}+\de{c}{33}{B}{4}{z}+\de{e}{33}{C}{4}{z}]}{}{z}+6\de{c}{44}{A}{5}{z}=0
+\end{equation}
+\begin{equation}\label{labeq_AppBsimitem+44}
+\qiudao{[6\jiaobiao{c}{13}u_{5}+\jiaobiao{c}{13}A_{5}+\de{c}{33}{w}{4}{z}+\de{e}{33}{\phi}{4}{z}]}{}{z}+6c_{44}u_{5,z}+c_{44}A_{5,z}=0
+\end{equation}
+\begin{equation}\label{labeq_AppBsimitem+45}
+\qiudao{[6\er{e}{31}{A}{5}+\de{e}{33}{B}{4}{z}-\de{\xi}{33}{\phi}{4}{z}]}{}{z}+6\de{e}{15}{A}{5}{z}=0
+\end{equation}
+\begin{equation}\label{labeq_AppBsimitem+46}
+\qiudao{[6\jiaobiao{e}{31}u_{5}+\jiaobiao{e}{31}A_{5}+\de{e}{33}{w}{4}{z}-\de{\xi}{33}{\phi}{4}{z}]}{}{z}+6e_{15}u_{5,z}+e_{15}A_{5,z}=0.
+\end{equation}
+\end{subequations}
+According to the boundary   in  Eq.~\eqref{labeq_AppBboundcon},   we can obtain
+\begin{subequations}\label{labeq_AppBboundcon+4}
+\begin{equation}\label{labeq_AppBboundcon+41}
+[\de{c}{44}{A}{5}{z}]\big|_{z=\pm h/2}=0
+\end{equation}
+\begin{equation}\label{labeq_AppBboundcon+42}
+[\de{c}{44}{u}{5}{z}]\big|_{z=\pm h/2}=0
+\end{equation}
+\begin{equation}\label{labeq_AppBboundcon+43}
+[6\er{c}{31}{A}{5}+\de{c}{33}{B}{4}{z}+\de{e}{33}{c}{4}{z}]\big|_{z=\pm h/2}=0
+\end{equation}
+\begin{equation}\label{labeq_AppBboundcon+44}
+[6\er{c}{31}{u}{5}+\er{c}{31}{A}{5}+\de{c}{33}{w}{4}{z}+\de{e}{33}{\phi}{m}{z}]\big|_{z=\pm h/2}=0
+\end{equation}
+\begin{equation}\label{labeq_AppBboundcon+45}
+[6\er{e}{31}{A}{5}+\de{e}{33}{B}{4}{z}-\de{\xi}{33}{c}{4}{z}]\big|_{z=\pm h/2}=0
+\end{equation}
+\begin{equation}\label{labeq_AppBboundcon+46}
+[6\er{e}{31}{u}{5}+\er{e}{31}{A}{5}+\de{e}{33}{w}{4}{z}-\de{\xi}{33}{\phi}{4}{z}]\big|_{z=\pm h/2}=0.
+\end{equation}
+\end{subequations}
+Integrating Eqs.~\eqref{labeq_AppBsimitem+41} and \eqref{labeq_AppBsimitem+42} and with the aid of  Eqs.~\eqref{labeq_AppBboundcon+41} and ~\eqref{labeq_AppBboundcon+42}, respectively,  we obtain
+\begin{equation}\label{labeq_+4zeros}
+\qiudao{u}{5}{z}=0,\;\qiudao{A}{5}{z}=0,
+\end{equation}
+which immediately gives
+\begin{equation}\label{labeq_+4const}
+u_{5}=a_{1},\;A_{5}=a_{2}.
+\end{equation}
+Then, integrating Eqs.\eqref{labeq_AppBsimitem+43}, \eqref{labeq_AppBsimitem+44},  \eqref{labeq_AppBsimitem+45} and \eqref{labeq_AppBsimitem+46} with the aid of  Eqs.~\eqref{labeq_AppBboundcon+43},  \eqref{labeq_AppBboundcon+44}, \eqref{labeq_AppBboundcon+45} and \eqref{labeq_AppBboundcon+46}, respectively, we can obtain
+\begin{subequations}\label{labeq_AppB+4_diff}
+\begin{equation}\label{labeq_AppB+4_diff01}
+\begin{split}
+&\de{c}{33}{B}{4}{z}+\de{e}{33}{c}{4}{z}=-6\er{c}{31}{a}{2}\\
+\end{split}
+\end{equation}
+\begin{equation}\label{labeq_AppB+4_diff2}
+\begin{split}
+&\de{c}{33}{w}{4}{z}+\de{e}{33}{\phi}{m}{z}= -6c_{31}a_{1}-c_{31}a_{2}\\
+\end{split}
+\end{equation}
+\begin{equation}\label{labeq_AppB+4_diff03}
+\begin{split}
+&\de{e}{33}{B}{4}{z}-\de{\xi}{33}{c}{4}{z}= -6\er{e}{31}{a}{2}\\
+\end{split}
+\end{equation}
+\begin{equation}\label{labeq_AppB+4_diff04}
+\begin{split}
+&\de{e}{33}{w}{4}{z}-\de{\xi}{33}{\phi}{4}{z}=-6e_{31}a_{1}-e_{31}a_{2}\\
+\end{split}
+\end{equation}
+\end{subequations}
+Solving Eq.~\eqref{labeq_AppB+4_diff} gives
+\begin{subequations}\label{AppB+4_diffresult}
+\begin{equation}\label{AppB+4_diffresult01}
+\begin{split}
+&B_{4,z}=-6a_{2}\frac{\er{e}{31}{e}{33}+\xi_{33}c_{31}}{e_{33}^{2}+\xi_{33}c_{33}}\\
+\end{split}
+\end{equation}
+\begin{equation}\label{AppB+4_diffresult02}
+\begin{split}
+&C_{4,z}=-6a_{2}\frac{\er{e}{33}{c}{31}-c_{33}e_{31}}{e_{33}^{2}+\xi_{33}c_{33}} \\
+\end{split}
+\end{equation}
+\begin{equation}\label{AppB+4_diffresult03}
+\begin{split}
+&w_{4,z}=(-6a_{1}+a_{2})\frac{\er{e}{31}{e}{33}+\xi_{33}c_{31}}{e_{33}^{2}+\xi_{33}c_{33}}\\
+\end{split}
+\end{equation}
+\begin{equation}\label{AppB+4_diffresult04}
+\begin{split}
+&\phi_{4,z}=(-6a_{1}+a_{2})\frac{\er{e}{33}{c}{31}-c_{33}e_{31}}{e_{33}^{2}+\xi_{33}c_{33}}.
+\end{split}
+\end{equation}
+\end{subequations}
+
+
+~\\
+\textbf{Case $m=2$}
+
+
+When $m=2$, Eqs.~\eqref{labeq_AppBsimitem} can be rewritten as
+\begin{subequations}\label{labeq_AppBsimitem+2}
+\begin{equation}\label{labeq_AppBsimitem+21}
+\qiudao{[c_{44}A_{3,z}+4c_{44}B_{4}+4e_{15}C_{4}]}{}{z}
++24\er{c}{11}{A}{5}+4\de{c}{13}{B}{4}{z}+4e_{31}C_{4,z}=0
+\end{equation}
+\begin{equation}\label{labeq_AppBsimitem+22}
+\begin{split}
+&\qiudao{\big[c_{44}u_{3,z}+4c_{44}w_{4}+c_{44}B_{4}+4e_{15}\phi_{4}+e_{15}C_{4}\big]}{}{z}\\
+&+24\er{c}{11}{u}{5}+10\er{c}{11}{A}{5}+4c_{13}w_{4,z}+c_{13}B_{4,z}+4e_{31}\phi_{4,z}+e_{31}C_{4,z}=0
+\end{split}
+\end{equation}
+\begin{equation}\label{labeq_AppBsimitem+23}
+\qiudao{[4\er{c}{13}{A}{3}+\de{c}{33}{B}{2}{z}+\de{e}{33}{C}{2}{z}]}{}{z}+4c_{44}A_{3,z} + 16c_{44}B_{4}+16\er{e}{15}{C}{4}=0
+\end{equation}
+\begin{equation}\label{labeq_AppBsimitem+24}
+\begin{split}
+&\qiudao{[4c_{13}u_{3}+c_{13}A_{3}+\de{c}{33}{w}{2}{z}+\de{e}{33}{\phi}{2}{z}]}{}{z}\\
+&+4c_{44}u_{3,z}+c_{44}A_{3,z} + 16c_{44}w_{4}+8c_{44}B_{4}+ 16e_{15}\phi_{4}+8c_{44}C_{4}=0
+\end{split}
+\end{equation}
+\begin{equation}\label{labeq_AppBsimitem+25}
+\qiudao{[4\er{e}{31}{A}{3}+\de{e}{33}{B}{2}{z}-\de{\xi}{33}{C}{2}{z}]}{}{z} + 4e_{15}A_{3,z} + 16e_{15}B_{4}-16\er{\xi}{11}{C}{4}=0
+\end{equation}
+\begin{equation}\label{labeq_AppBsimitem+26}
+\begin{split}
+&\qiudao{\big[4c_{13}u_{3}+ c_{13}A_{3}+\de{e}{33}{w}{2}{z}-\de{\xi}{33}{\phi}{2}{z}\big]}{}{z}\\
+&+4e_{15}u_{3,z}+  e_{15}A_{3,z}+16e_{15}w_{4}+8e_{15}B_{4} - 16\xi_{11}\phi_{4}+ 8\xi_{11}C_{4}=0\\
+\end{split}
+\end{equation}
+\end{subequations}
+Correspondingly, the boundary conditions  in  Eq.~\eqref{labeq_AppBboundcon}  can be rewritten as
+\begin{subequations}\label{labeq_AppBboundcon+2}
+\begin{equation}\label{labeq_AppBboundcon+21}
+[c_{44}A_{3,z}+ 4c_{44}B_{4}+  4e_{15}C_{4}]\big|_{z=\pm h/2}=0
+\end{equation}
+\begin{equation}\label{labeq_AppBboundcon+22}
+[c_{44}u_{3,z}+4c_{44}w_{4}+ c_{44}B_{4}+4e_{15}\phi_{4}+e_{15}C_{4}]\big|_{z=\pm h/2}=0
+\end{equation}
+\begin{equation}\label{labeq_AppBboundcon+23}
+[4\er{e}{31}{A}{3}+\de{e}{33}{B}{2}{z}-\de{\xi}{33}{C}{2}{z}]\big|_{z=\pm h/2}=0
+\end{equation}
+\begin{equation}\label{labeq_AppBboundcon+24}
+[4e_{31}u_{3}+e_{31}A_{3}+\de{e}{33}{w}{2}{z}-\de{\xi}{33}{\phi}{2}{z}]\big|_{z=\pm h/2}=0
+\end{equation}
+\begin{equation}\label{labeq_AppBboundcon+25}
+[4\er{c}{13}{A}{3}+\de{c}{33}{B}{2}{z}+\de{e}{33}{C}{2}{z}]\big|_{z=\pm h/2}=0
+\end{equation}
+\begin{equation}\label{labeq_AppBboundcon+26}
+[4c_{13}u_{3}+c_{13}A_{3}+\de{c}{33}{w}{2}{z}+\de{e}{33}{\phi}{2}{z}]\big|_{z=\pm h/2}=0
+\end{equation}
+\end{subequations}
+
+Substituting $A_5 = a_2$  and Eqs.~\eqref{AppB+4_diffresult01} and ~\eqref{AppB+4_diffresult02} into Eq.~\eqref{labeq_AppBsimitem+21}, and with the aid of boundary condition in Eq.~\eqref{labeq_AppBboundcon+21}, we can obtain
+\begin{equation}
+\begin{split}
+&[4c_{44}B_{4}+ c_{44}A_{3,z})+4e_{15}C_{4} \big|_{z=h/2} \\
+&= -24a_{2}\int_{-h/2}^{h/2}\left[c_{11}-\frac{\er{e}{31}{e}{33}e_{13}+c_{31}^{2}c_{33}+\er{e}{33}{c}{31}e_{31}-e_{31}^{2}c_{33}}{e_{33}^{2}+\xi_{33}c_{33}}\right]d\eta\\
+&=0,
+\end{split}
+\end{equation}
+which results in
+\begin{equation}\label{labeq_AppBa2=0}
+A_5= a_2 = 0.
+\end{equation}
+Thus, both   $B_{4,z}$ and $C_{4,z}$  in  Eqs.~\eqref{AppB+4_diffresult01} and ~\eqref{AppB+4_diffresult02} will be zeros, and we can let $B_4 = a_3$ and $C_4 = a_4$. Then form Eq.~\eqref{labeq_AppBa2=0} we can obtain
+\begin{equation}\label{labeq_AppA3dz}
+\begin{split}
+A_{3,z}=-4a_{4}\frac{e_{15}}{c_{44}}-4a_{3}
+\end{split}
+\end{equation}
+
+Similarly, substituting $u_5 = a_1$  and Eqs.~\eqref{AppB+4_diffresult03} and ~\eqref{AppB+4_diffresult04} into Eq.~\eqref{labeq_AppBsimitem+22}, and with the aid of boundary condition in Eq.~\eqref{labeq_AppBboundcon+22}, we can obtain
+\begin{equation}
+\begin{split}
+&\big[c_{44}u_{3,z}+4c_{44}w_{4}+c_{44}B_{4}+4e_{15}\phi_{4}+e_{15}C_{4}\big] \big|_{z=h/2}\\
+&=-24a_{1}\int_{-h/2}^{h/2}\left[c_{11}-c_{13}\frac{\er{e}{31}{e}{33}+\xi_{33}c_{31}}     {e_{33}^{2}+\xi_{33}c_{33}}-e_{31}\frac{\er{e}{33}{c}{31}-c_{33}e_{31}}{e_{33}^{2}+\xi_{33}c_{33}}\right]d\eta
+&=0,
+\end{split}
+\end{equation}
+which indicates
+\begin{equation}\label{labeq_AppBa1=0}
+u_5= a_1 = 0.
+\end{equation}
+Then both   $w_{4,z}$ and $\phi_{4,z}$  in  Eqs.~\eqref{AppB+4_diffresult01} and ~\eqref{AppB+4_diffresult02} will be zeros, and we can write them as $w_4 = a_5 $ and $\phi_4 = a_6$, respectively.
+
+
+Combining  Eq.~\eqref{labeq_AppBsimitem+24}  and  Eq.~\eqref{labeq_AppBboundcon+26}, we can derive
+\begin{equation}
+\begin{split}
+&\big[4c_{13}u_{3}+c_{13}A_{3}+\de{c}{33}{w}{2}{z}+\de{e}{33}{\phi}{2}{z}\big]\Big|_{z=h/2}
+=4a_{4}
+\int_{-h/2}^{h/2}e_{15}d\eta
+=0,
+\end{split}
+\end{equation}
+which lead to
+\begin{equation}\label{labeq_AppBa4=0}
+C_4= a_4 = 0.
+\end{equation}
+Then,  integrating   Eq.~\eqref{labeq_AppA3dz} will give
+\begin{equation}\label{labeq_AppA3}
+A_{3}=-4a_{3}z+a_{7},
+\end{equation}
+where $a_7$ is a constant. Similarly, the combination of Eq.~\eqref{labeq_AppBsimitem+26}  and  Eq.~\eqref{labeq_AppBboundcon+24} gives
+\begin{equation}
+\begin{split}
+\big[4c_{13}u_{3}+c_{13}A_{3}+\de{e}{33}{w}{2}{z}-\de{\xi}{33}{\phi}{2}{z}\big]\Big|_{z=h/2}=16a_{6}
+\int_{-h/2}^{h/2}\Big(\frac{e_{15}^{2}}{c_{44}}+c_{31}\Big)d\eta=0,
+\end{split}
+\end{equation}
+and leads to
+\begin{equation}\label{labeq_AppBa6=0}
+\phi_{4}=a_{6}=0
+\end{equation}
+
+
+
+Then, noticing $A_{3,z} = - a_3$ and $B_4 =  a_3$,   from  Eq.~\eqref{labeq_AppBsimitem+23} and Eq.~\eqref{labeq_AppBsimitem+25}, we can obtain  simultaneous equations about $B_{2,z}$ and $C_{2,z}$ as
+\begin{subequations}\label{labeq_AppBB2zC2z}
+\begin{equation}\label{labeq_AppBB2zC2z_01}
+\de{c}{33}{B}{2}{z}+\de{e}{33}{C}{2}{z}=-4\er{c}{13}{A}{3}
+\end{equation}
+\begin{equation}\label{labeq_AppBB2zC2z_02}
+\de{e}{33}{B}{2}{z}-\de{\xi}{33}{C}{2}{z}=-4\er{e}{31}{A}{3}.
+\end{equation}
+\end{subequations}
+And then solution  for $B_{2,Z}$ and $C_{2,Z}$ can be expressed as
+\begin{subequations}\label{labeq_AppBBC2solu}
+\begin{equation}\label{labeq_AppBBC2solu_01}
+B_{2,z}=16a_{3}z\frac{\er{e}{31}{e}{33}+\xi_{33}c_{31}}{e_{33}^{2}+\xi_{33}c_{33}}-4a_{7}\frac{\er{e}{31}{e}{33}+\xi_{33}c_{31}}{e_{33}^{2}+\xi_{33}c_{33}}\\
+\end{equation}
+\begin{equation}\label{labeq_AppBBC2solu_02}
+C_{2,z}=16a_{3}z\frac{\er{c}{13}{e}{33}-c_{33}e_{31}}{e_{33}^{2}+\xi_{33}c_{33}}-4a_{7}\frac{\er{e}{31}{e}{33}+\xi_{33}c_{31}}{e_{33}^{2}+\xi_{33}c_{33}}
+\end{equation}
+\end{subequations}
+
+~\\
+\textbf{Case $m=0$}
+
+In the end, for the case of  $m=0$,  Eqs.~\eqref{labeq_AppBsimitem} will be
+\begin{subequations}\label{labeq_AppBsimitem+0}
+\begin{equation}\label{labeq_AppBsimitem+01}
+\qiudao{[\de{c}{44}{A}{1}{z}+ 2\er{c}{44}{B}{2}+2\er{e}{15}{C}{2}]}{}{z}+8\er{c}{11}{A}{3}+2\de{c}{13}{B}{2}{z}+2\de{e}{31}{C}{2}{z}=0
+\end{equation}
+\begin{equation}\label{labeq_AppBsimitem+02}
+\begin{split}
+&\qiudao{[\de{c}{44}{u}{1}{z}+2\er{c}{44}{w}{2}+\er{c}{44}{B}{2}+2\er{e}{15}{\phi}{2}+e_{15}C_{2}]}{}{z}\\
+&+8\er{c}{11}{u}{3}+6c_{11}A_{3}+2c_{13}w_{2,z}+c_{13}B_{2,z}+2e_{31}\phi_{2,z}+e_{31}C_{2,z}=0
+\end{split}
+\end{equation}
+\begin{equation}\label{labeq_AppBsimitem+03}
+\qiudao{[2\er{c}{13}{A}{1}+\de{c}{33}{B}{0}{z}+\de{e}{33}{C}{0}{z}]}{}{z}+ c_{44}A_{1,z}+ 4c_{44}B_{2}+4e_{15}C_{2}=0
+\end{equation}
+\begin{equation}\label{labeq_AppBsimitem+04}
+\begin{split}
+&\qiudao{[2\er{c}{13}{u}{1}+\er{c}{13}{A}{1}+\de{c}{33}{w}{0}{z}+\de{e}{33}{\phi}{0}{z}]}{}{z}\\
+&+2c_{44}u_{1,z}+c_{44}A_{1,z}+4c_{44}w_{2}+4c_{44}B_{2}+4e_{15}\phi_{2}+4e_{15}C_{2}=0
+\end{split}
+\end{equation}
+\begin{equation}\label{labeq_AppBsimitem+05}
+\qiudao{[2\er{e}{31}{A}{1}+\de{e}{33}{B}{1}{z}-\de{\xi}{33}{C}{0}{z}]}{}{z}+ e_{15}A_{1,z} + 4e_{15}B_{2}-4\xi_{11}C_{2}=0\\[.5em]
+\end{equation}
+\begin{equation}\label{labeq_AppBsimitem+06}
+\begin{split}
+&\qiudao{[2\er{e}{31}{u}{1}+\er{e}{31}{A}{1}+\de{e}{33}{w}{0}{z}-\de{\xi}{33}{\phi}{0}{z}]}{}{z}\\
+&+2e_{15}u_{1,z}+e_{15}A_{1,z} +4e_{15}w_{2}+4e_{15}B_{2}-4\xi_{11}\phi_{2}-4\xi_{11}C_{2}=0\\[.5em]
+\end{split}
+\end{equation}
+\end{subequations}
+Correspondingly, the boundary condition in  Eqs.~\eqref{labeq_AppBboundcon}    becomes
+\begin{subequations}\label{labeq_AppBboundcon+0}
+\begin{equation}\label{labeq_AppBboundcon+01}
+[\de{c}{44}{A}{1}{z}+2\er{c}{44}{B}{2}+2\er{e}{15}{C}{2}]\big|_{z=\pm h/2}=0
+\end{equation}
+\begin{equation}\label{labeq_AppBboundcon+02}
+[\de{c}{44}{u}{1}{z}+2\er{c}{44}{w}{2}+\er{c}{44}{B}{2}+2\er{e}{15}{\phi}{2}+e_{15}C_{2}]\big|_{z=\pm h/2}=0
+\end{equation}
+\begin{equation}\label{labeq_AppBboundcon+03}
+[2\er{e}{31}{A}{1}+\de{e}{33}{B}{1}{z}-\de{\xi}{33}{C}{0}{z}]\big|_{z=\pm h/2}=0
+\end{equation}
+\begin{equation}\label{labeq_AppBboundcon+04}
+[2\er{e}{31}{u}{1}+\er{e}{31}{A}{1}+\de{e}{33}{w}{0}{z}-\de{\xi}{33}{\phi}{0}{z}]\big|_{z=\pm h/2}=0
+\end{equation}
+\begin{equation}\label{labeq_AppBboundcon+05}
+[2\er{c}{13}{A}{1}+\de{c}{33}{B}{0}{z}+\de{e}{33}{C}{0}{z}]\big|_{z=\pm h/2}=0
+\end{equation}
+\begin{equation}\label{labeq_AppBboundcon+06}
+\begin{split}
+[2\er{c}{13}{u}{1}+\er{c}{13}{A}{1}+\de{c}{33}{w}{0}{z}+\de{e}{33}{\phi}{0}{z}]\big|_{z=~h/2}= -p\\
+[2\er{c}{13}{u}{1}+\er{c}{13}{A}{1}+\de{c}{33}{w}{0}{z}+\de{e}{33}{\phi}{0}{z}]\big|_{z=-h/2}=~0\\
+\end{split}
+\end{equation}
+\end{subequations}
+
+Substituting Eqs.~\eqref{labeq_AppA3} and \eqref{labeq_AppBBC2solu} into Eq.~\eqref{labeq_AppBboundcon+01}, and with the aid of Eq.~\eqref{labeq_AppBboundcon+01}, we can obtain
+\begin{equation}\label{labeq_AppBa3a7_1}
+\begin{split}
+&2\er{c}{44}{B}{2}+\de{c}{44}{A}{1}{z}+2\er{e}{15}{C}{2}\Big|_{z=h/2} = -32a_{3}K_{1}\Big({\frac{h}{2}}\Big)+8a_{7}K_{0}\Big(\frac{h}{2}\Big)
+&=0.
+\end{split}
+\end{equation}
+
+
+
+Similarly, the combination of Eq.~\eqref{labeq_AppBsimitem+03} and Eq.~\eqref{labeq_AppBboundcon+05} gives
+\begin{equation}\label{labeq_AppBa3a7_2}
+\begin{split}
+&2\er{c}{13}{A}{1}+\de{c}{33}{B}{0}{z}+\de{e}{33}{C}{0}{z}\\
+&=4a_{3}\bigg[\frac{h}{2}K_{1}\Big(\frac{h}{2}\Big)-K_{2}\Big(\frac{h}{2}\Big)\bigg]-a_{7}\bigg[\frac{h}{2}K_{0}\Big(\frac{h}{2}\Big)-K_{1}\Big(\frac{h}{2}\Big)\bigg]=0
+\end{split}
+\end{equation}
+For the linear equations system   composed of Eqs.~\label{labeq_AppBa3a7_1} and \label{labeq_AppBa3a7_2},  its  trivial is  not zero, i.e.,  $4K_{1}^{2}\Big(\frac{h}{2}\Big)-4K_{0}\Big(\frac{h}{2}\Big)K_{2}\Big(\frac{h}{2}\Big)\neq0$, so its solution is
+\begin{equation}\label{labeq_AppBa6=0}
+\begin{split}
+&B_{4}=a_{3}=0\\
+&A_{3}=a_{7}=0.
+\end{split}
+\end{equation}
+Furthermore, from Eq.~\eqref{labeq_AppBBC2solu} we can obtain $B_{2,z}=0$ and $C_{2,z}=0$.   Then, letting $B_2 = a_8$ and   $C_{2}=a_9$, from  Eq.~\eqref{labeq_AppBa3a7_1} we can obtain
+\begin{equation}\label{labeq_AppBA1z}
+A_{1,z}=-\frac{2e_{15}a_{9}}{c_{44}}-2a_{8}.
+\end{equation}
+Integrating Eq.~\eqref{labeq_AppBsimitem+03} with the boundary condition in Eq.~\eqref{labeq_AppBboundcon+03}  gives
+\begin{equation}\label{labeq_AppBa9eq}
+\begin{split}
+&[2\er{e}{31}{A}{1}+\de{e}{33}{B}{1}{z}-\de{\xi}{33}{C}{0}{z}]\big|_{z= h/2}=-4a_{9}\int_{-\frac{h}{2}}^{\frac{h}{2}}\left(\frac{e_{15}^{2}}{c_{44}}+\xi_{11}\right)d\eta=0,
+\end{split}
+\end{equation}
+which leads to
+\begin{equation}\label{labeq_AppBa9=0}
+\begin{split}
+C_2 = a_9 = 0.
+\end{split}
+\end{equation}
+
+
+
+
+
+In summary,  we prove  that the displacement components for the  electroelasticity annular plate under uniform load on its upper surface take the following forms
+
+\begin{subequations}\label{labeq_AppBdisform}
+\begin{equation}\label{labeq_AppBdisform01}
+u(r,z)=r^{-1}\jiaobiao{u}{-1}(z)+r\jiaobiao{u}{1}(z)+r^{3}\jiaobiao{u}{3}(z)+\jiaobiao{A}{1}(z)r\ln\frac{r}{r_1},\\
+\end{equation}
+\begin{equation}\label{labeq_AppBboundcon+02}
+w(r,z)=\jiaobiao{w}{0}(z)+r^{2}\jiaobiao{w}{2}(z)+r^{4}\jiaobiao{w}{4}(z)+\jiaobiao{B}{0}(z)\ln\frac{r}{r_1}+\jiaobiao{B}{2}(z)r^{2}\ln\frac{r}{r_1},\\
+\end{equation}
+\begin{equation}\label{labeq_AppBboundcon+03}
+\phi(r,z)=\jiaobiao{\phi}{0}(z)+r^{2}\jiaobiao{\phi}{2}(z)+\jiaobiao{C}{0}(z)\ln\frac{r}{r_1},
+\end{equation}
+\end{subequations}
+which  is the same as   Eq.~\eqref{labeq_gendis}
+
+
+
+
+
+\end{document}
